@@ -124,22 +124,25 @@
   <data name="puzzle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\puzzle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Folder - Users (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Folder - Users (2).ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="11301366_361196224081390_575244631_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\11301366_361196224081390_575244631_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Basketball (11)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Basketball (11).ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Folder - Users (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Folder - Users (2).ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Board (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Board (2).ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="070342-firey-orange-jelly-icon-alphanumeric-question-mark1-ps" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\070342-firey-orange-jelly-icon-alphanumeric-question-mark1-ps.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="online-registration-icon-png-538" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\online-registration-icon-png-538.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

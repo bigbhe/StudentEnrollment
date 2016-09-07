@@ -89,16 +89,17 @@
     <Compile Include="Additional Form\FormCrypt.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Additional Form\Helper.Designer.vb">
-      <DependentUpon>Helper.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Additional Form\Helper.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Class\ClassActiveUser.vb" />
+    <Compile Include="Class\ClassGelombang.vb" />
+    <Compile Include="Class\ClassPendaftaran.vb" />
     <Compile Include="Class\CryptText.vb" />
     <Compile Include="Class\ReadConfig.vb" />
+    <Compile Include="Dataset\DataSetGelombang.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetGelombang.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dataset\DataSetPendaftaran.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -113,6 +114,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetUser.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Gelombang\FormDetailGelombang.Designer.vb">
+      <DependentUpon>FormDetailGelombang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Gelombang\FormDetailGelombang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Gelombang\FormHeaderGelombang.Designer.vb">
+      <DependentUpon>FormHeaderGelombang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Gelombang\FormHeaderGelombang.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\Pendaftaran\FormPendaftaran.Designer.vb">
       <DependentUpon>FormPendaftaran.vb</DependentUpon>
@@ -162,6 +175,7 @@
     <Compile Include="Form\PropertiPendaftaran\FormMataKuliah.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="GlobalSuppressions.vb" />
     <Compile Include="MainForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -183,8 +197,11 @@
     <EmbeddedResource Include="Additional Form\FormCrypt.resx">
       <DependentUpon>FormCrypt.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Additional Form\Helper.resx">
-      <DependentUpon>Helper.vb</DependentUpon>
+    <EmbeddedResource Include="Form\Gelombang\FormDetailGelombang.resx">
+      <DependentUpon>FormDetailGelombang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Gelombang\FormHeaderGelombang.resx">
+      <DependentUpon>FormHeaderGelombang.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Pendaftaran\FormPendaftaran.resx">
       <DependentUpon>FormPendaftaran.vb</DependentUpon>
@@ -229,6 +246,17 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
+    <None Include="Dataset\DataSetGelombang.xsc">
+      <DependentUpon>DataSetGelombang.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DataSetGelombang.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetGelombang.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Dataset\DataSetGelombang.xss">
+      <DependentUpon>DataSetGelombang.xsd</DependentUpon>
+    </None>
     <None Include="Dataset\DataSetPendaftaran.xsc">
       <DependentUpon>DataSetPendaftaran.xsd</DependentUpon>
     </None>
@@ -290,6 +318,7 @@
     <None Include="Resources\070342-firey-orange-jelly-icon-alphanumeric-question-mark1-ps.png" />
     <None Include="Resources\Folder - Users %282%29.ico" />
     <None Include="Resources\11.png" />
+    <None Include="Resources\online-registration-icon-png-538.png" />
     <Content Include="Settings\config.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -61,4 +61,23 @@ Partial Public Class MainForm
         FormStatusPendaftaran.ShowDialog()
 
     End Sub
+
+    Private Sub menuGelombang_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles menuGelombang.ItemClick
+
+        If Me.MdiChildren.Contains(FormHeaderGelombang) Then
+            FormHeaderGelombang.Focus()
+        Else
+            FormHeaderGelombang.MdiParent = Me
+            FormHeaderGelombang.Show()
+        End If
+    End Sub
+
+    Private Sub menuPendaftaran_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles menuPendaftaran.ItemClick
+        If Me.MdiChildren.Contains(FormPendaftaran) Then
+            FormPendaftaran.Focus()
+        Else
+            FormPendaftaran.MdiParent = Me
+            FormPendaftaran.Show()
+        End If
+    End Sub
 End Class

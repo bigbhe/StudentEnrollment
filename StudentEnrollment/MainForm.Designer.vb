@@ -38,9 +38,11 @@
         Me.menuMstTest = New DevExpress.XtraBars.BarButtonItem()
         Me.menuPendaftaran = New DevExpress.XtraBars.BarButtonItem()
         Me.menuStatus = New DevExpress.XtraBars.BarButtonItem()
+        Me.menuGelombang = New DevExpress.XtraBars.BarButtonItem()
         Me.RibbonPage2 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup3 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPage3 = New DevExpress.XtraBars.Ribbon.RibbonPage()
+        Me.RibbonPageGroup5 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup4 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.rpSettings = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
@@ -60,9 +62,9 @@
         '
         Me.ribbonControl1.Controller = Me.BarAndDockingController1
         Me.ribbonControl1.ExpandCollapseItem.Id = 0
-        Me.ribbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl1.ExpandCollapseItem, Me.SkinRibbonGalleryBarItem1, Me.labelDateTime, Me.BarDockingMenuItem1, Me.labelFullName, Me.menuUser, Me.menuChangePassword, Me.menuMstHobi, Me.menuMstJurusan, Me.menuMstMataPelajaran, Me.menuMstTest, Me.menuPendaftaran, Me.menuStatus})
+        Me.ribbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl1.ExpandCollapseItem, Me.SkinRibbonGalleryBarItem1, Me.labelDateTime, Me.BarDockingMenuItem1, Me.labelFullName, Me.menuUser, Me.menuChangePassword, Me.menuMstHobi, Me.menuMstJurusan, Me.menuMstMataPelajaran, Me.menuMstTest, Me.menuPendaftaran, Me.menuStatus, Me.menuGelombang})
         Me.ribbonControl1.Location = New System.Drawing.Point(0, 0)
-        Me.ribbonControl1.MaxItemId = 12
+        Me.ribbonControl1.MaxItemId = 13
         Me.ribbonControl1.Name = "ribbonControl1"
         Me.ribbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage2, Me.RibbonPage3, Me.rpSettings, Me.ribbonPage1})
         Me.ribbonControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemTextEdit1})
@@ -167,6 +169,14 @@
         Me.menuStatus.Name = "menuStatus"
         Me.menuStatus.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
+        'menuGelombang
+        '
+        Me.menuGelombang.Caption = "Session"
+        Me.menuGelombang.Glyph = Global.StudentEnrollment.My.Resources.Resources.online_registration_icon_png_538
+        Me.menuGelombang.Id = 12
+        Me.menuGelombang.Name = "menuGelombang"
+        Me.menuGelombang.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        '
         'RibbonPage2
         '
         Me.RibbonPage2.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup3})
@@ -185,9 +195,16 @@
         '
         'RibbonPage3
         '
-        Me.RibbonPage3.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup4})
+        Me.RibbonPage3.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup5, Me.RibbonPageGroup4})
         Me.RibbonPage3.Name = "RibbonPage3"
         Me.RibbonPage3.Text = "Pendaftaran"
+        '
+        'RibbonPageGroup5
+        '
+        Me.RibbonPageGroup5.AllowTextClipping = False
+        Me.RibbonPageGroup5.ItemLinks.Add(Me.menuGelombang)
+        Me.RibbonPageGroup5.Name = "RibbonPageGroup5"
+        Me.RibbonPageGroup5.Text = "Gelombang Pendaftaran"
         '
         'RibbonPageGroup4
         '
@@ -297,4 +314,6 @@
     Friend WithEvents RibbonPage3 As XtraBars.Ribbon.RibbonPage
     Friend WithEvents RibbonPageGroup4 As XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents menuStatus As XtraBars.BarButtonItem
+    Friend WithEvents menuGelombang As XtraBars.BarButtonItem
+    Friend WithEvents RibbonPageGroup5 As XtraBars.Ribbon.RibbonPageGroup
 End Class

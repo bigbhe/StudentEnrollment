@@ -58,8 +58,13 @@
     End Sub
 
     Sub GetExistingData()
+#Disable Warning BC42016 ' Implicit conversion from 'Object' to 'String'.
         encryptedPassword = GridView1.GetFocusedRowCellValue(colpassword)
+#Enable Warning BC42016 ' Implicit conversion from 'Object' to 'String'.
+
+#Disable Warning BC42016 ' Implicit conversion from 'Object' to 'Integer'.
         id = GridView1.GetFocusedRowCellValue(colidUser)
+#Enable Warning BC42016 ' Implicit conversion from 'Object' to 'Integer'.
     End Sub
 
     Sub convertExistingData()

@@ -6,6 +6,8 @@ Module ModuleDescription
     Public crypt As New CryptText("StudentEnrollment-SMKNusaJayaTangerang")
     Public rConfig As New ReadConfig
     Public aUser As New ClassActiveUser
+    Public oClassGelombang As New ClassGelombang
+    Public oClassPendaftaran As New ClassPendaftaran
 
     Public sqlCnn As SqlConnection
     Public sqlCmd As SqlCommand
@@ -109,7 +111,7 @@ Module ModuleDescription
         Dim finalCode As String
         code = CType(Date.Today, String)
         trimmedCode = Replace(code, "/", "")
-        finalCode = String.Format("TO/{0}/{1}", trimmedCode, GetUniqueKey(3))
+        finalCode = String.Format("{0}", trimmedCode)
         Return finalCode
     End Function
 

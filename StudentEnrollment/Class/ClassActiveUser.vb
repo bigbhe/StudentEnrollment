@@ -63,13 +63,22 @@ Public Class ClassActiveUser
             dbClose()
         End Try
 
+#Disable Warning BC42018 ' Operands of type Object used for operator '='; use the 'Is' operator to test object identity.
         If ds.Tables(0).Rows(0)(0) = 0 Then
+#Enable Warning BC42018 ' Operands of type Object used for operator '='; use the 'Is' operator to test object identity.
+#Disable Warning BC42016 ' Implicit conversion from 'Object' to 'Integer'.
             IDUser = ds.Tables(1).Rows(0)("iduser")
+#Enable Warning BC42016 ' Implicit conversion from 'Object' to 'Integer'.
+
+#Disable Warning BC42016 ' Implicit conversion from 'Object' to 'String'.
             Fullname = ds.Tables(1).Rows(0)("fullname")
+#Enable Warning BC42016 ' Implicit conversion from 'Object' to 'String'.
             'Signature = ds.Tables(1).Rows(0)("signature") 'have to create a class to convert byte array to image
         End If
 
+#Disable Warning BC42016 ' Implicit conversion from 'Object' to 'Integer'.
         Return ds.Tables(0).Rows(0)(0)
+#Enable Warning BC42016 ' Implicit conversion from 'Object' to 'Integer'.
     End Function
 
 
