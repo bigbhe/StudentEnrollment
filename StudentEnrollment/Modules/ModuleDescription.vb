@@ -8,6 +8,7 @@ Module ModuleDescription
     Public aUser As New ClassActiveUser
     Public oClassGelombang As New ClassGelombang
     Public oClassPendaftaran As New ClassPendaftaran
+    Public oClassTest As New ClassTest
 
     Public sqlCnn As SqlConnection
     Public sqlCmd As SqlCommand
@@ -118,6 +119,11 @@ Module ModuleDescription
     Public Sub uniqueAlert(x As Form, ex As String)
         If ex.ToString.ToLower.Contains("unique") Then
             alertDialogFail(x, "Inserted Data Contain Duplicated Entry which is not allowed")
+
+        End If
+        If ex.ToString.ToLower.Contains("PRIMARY ") Then
+            alertDialogFail(x, "Inserted Data Contain Duplicated Entry which is not allowed")
+
         End If
     End Sub
 #End Region

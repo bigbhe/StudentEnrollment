@@ -12,7 +12,7 @@ Public Class FormDetailGelombang
         Try
             Me.DetailGelombangTableAdapter.Fill(Me.DataSetGelombang.detailGelombang, New System.Nullable(Of Integer)(CType(oClassGelombang.idGelombang, Integer)))
         Catch ex As System.Exception
-            System.Windows.Forms.MessageBox.Show(ex.Message)
+            MessageBox.Show(ex.Message)
         End Try
 
     End Sub

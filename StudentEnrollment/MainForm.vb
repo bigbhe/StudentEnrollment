@@ -19,9 +19,9 @@ Partial Public Class MainForm
         labelFullName.Caption = aUser.fullname
     End Sub
 
-    Private Sub tmrMain_Tick(sender As Object, e As EventArgs) Handles tmrMain.Tick
-        labelDateTime.Caption = Format(Now, "HH:mm:ss") + vbCrLf + Format(Now, "dddd, dd MMMM yyyy")
-    End Sub
+    'Private Sub tmrMain_Tick(sender As Object, e As EventArgs) Handles tmrMain.Tick
+    '    '    labelDateTime.Caption = Format(Now, "HH:mm:ss") + vbCrLf + Format(Now, "dddd, dd MMMM yyyy")
+    'End Sub
 
     Private Sub menuUser_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles menuUser.ItemClick
         If Me.MdiChildren.Contains(FormUser) Then
@@ -78,6 +78,19 @@ Partial Public Class MainForm
         Else
             FormPendaftaran.MdiParent = Me
             FormPendaftaran.Show()
+        End If
+    End Sub
+
+    Private Sub BarButtonItem1_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles BarButtonItem1.ItemClick
+        tnm.ShowNotification(1)
+    End Sub
+
+    Private Sub menuHeaderTest_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles menuHeaderTest.ItemClick
+        If Me.MdiChildren.Contains(FormTestHeader) Then
+            FormTestHeader.Focus()
+        Else
+            FormTestHeader.MdiParent = Me
+            FormTestHeader.Show()
         End If
     End Sub
 End Class

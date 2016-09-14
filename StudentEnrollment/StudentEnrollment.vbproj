@@ -44,15 +44,24 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.BonusSkins.v16.1" />
+    <Reference Include="DevExpress.Charts.v16.1.Core, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v16.1" />
+    <Reference Include="DevExpress.Office.v16.1.Core, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v16.1.Core, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v16.1.Core" />
+    <Reference Include="DevExpress.RichEdit.v16.1.Core, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v16.1" />
+    <Reference Include="DevExpress.Utils.v16.1.UI, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v16.1" />
     <Reference Include="DevExpress.Sparkline.v16.1.Core" />
+    <Reference Include="DevExpress.XtraCharts.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v16.1" />
+    <Reference Include="DevExpress.XtraGauges.v16.1.Core, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v16.1.Extensions, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -89,16 +98,28 @@
     <Compile Include="Additional Form\FormCrypt.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Additional Form\XtraForm1.Designer.vb">
+      <DependentUpon>XtraForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Additional Form\XtraForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Class\ClassActiveUser.vb" />
     <Compile Include="Class\ClassGelombang.vb" />
     <Compile Include="Class\ClassPendaftaran.vb" />
+    <Compile Include="Class\ClassTest.vb" />
     <Compile Include="Class\CryptText.vb" />
     <Compile Include="Class\ReadConfig.vb" />
     <Compile Include="Dataset\DataSetGelombang.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetGelombang.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\DataSetPelengkapPendaftaran.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPelengkapPendaftaran.xsd</DependentUpon>
     </Compile>
     <Compile Include="Dataset\DataSetPendaftaran.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -109,6 +130,19 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetPropertiPendaftaran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\DataSetReportPendaftarPersiswa.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetReportPendaftarPersiswa.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\DataSetTest.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetTest.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\DataSetTest.vb">
+      <DependentUpon>DataSetTest.xsd</DependentUpon>
     </Compile>
     <Compile Include="Dataset\DataSetUser1.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -127,6 +161,36 @@
     <Compile Include="Form\Gelombang\FormHeaderGelombang.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form\Pendaftaran\Additional\FormNilaiUN.Designer.vb">
+      <DependentUpon>FormNilaiUN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pendaftaran\Additional\FormNilaiUN.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Pendaftaran\Additional\FormPendidikanNonFormal.Designer.vb">
+      <DependentUpon>FormPendidikanNonFormal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pendaftaran\Additional\FormPendidikanNonFormal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Pendaftaran\Additional\FormPengalamanOrganisasi.Designer.vb">
+      <DependentUpon>FormPengalamanOrganisasi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pendaftaran\Additional\FormPengalamanOrganisasi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Pendaftaran\Additional\FormPrestasi.Designer.vb">
+      <DependentUpon>FormPrestasi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pendaftaran\Additional\FormPrestasi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Pendaftaran\Additional\FormTraHobi.Designer.vb">
+      <DependentUpon>FormTraHobi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pendaftaran\Additional\FormTraHobi.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form\Pendaftaran\FormPendaftaran.Designer.vb">
       <DependentUpon>FormPendaftaran.vb</DependentUpon>
     </Compile>
@@ -137,6 +201,24 @@
       <DependentUpon>FormStatusPendaftaran.vb</DependentUpon>
     </Compile>
     <Compile Include="Form\PropertiPendaftaran\FormStatusPendaftaran.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Report\FormReportPP.Designer.vb">
+      <DependentUpon>FormReportPP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Report\FormReportPP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Test\FormDetailTest.Designer.vb">
+      <DependentUpon>FormDetailTest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Test\FormDetailTest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Test\FormTestHeader.Designer.vb">
+      <DependentUpon>FormTestHeader.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Test\FormTestHeader.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\User\FormChangePassword.Designer.vb">
@@ -194,8 +276,17 @@
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="Report\XtraReport1.Designer.vb">
+      <DependentUpon>XtraReport1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReport1.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="Additional Form\FormCrypt.resx">
       <DependentUpon>FormCrypt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Additional Form\XtraForm1.resx">
+      <DependentUpon>XtraForm1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Gelombang\FormDetailGelombang.resx">
       <DependentUpon>FormDetailGelombang.vb</DependentUpon>
@@ -203,11 +294,35 @@
     <EmbeddedResource Include="Form\Gelombang\FormHeaderGelombang.resx">
       <DependentUpon>FormHeaderGelombang.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\Pendaftaran\Additional\FormNilaiUN.resx">
+      <DependentUpon>FormNilaiUN.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Pendaftaran\Additional\FormPendidikanNonFormal.resx">
+      <DependentUpon>FormPendidikanNonFormal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Pendaftaran\Additional\FormPengalamanOrganisasi.resx">
+      <DependentUpon>FormPengalamanOrganisasi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Pendaftaran\Additional\FormPrestasi.resx">
+      <DependentUpon>FormPrestasi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Pendaftaran\Additional\FormTraHobi.resx">
+      <DependentUpon>FormTraHobi.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Pendaftaran\FormPendaftaran.resx">
       <DependentUpon>FormPendaftaran.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\PropertiPendaftaran\FormStatusPendaftaran.resx">
       <DependentUpon>FormStatusPendaftaran.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Report\FormReportPP.resx">
+      <DependentUpon>FormReportPP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Test\FormDetailTest.resx">
+      <DependentUpon>FormDetailTest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Test\FormTestHeader.resx">
+      <DependentUpon>FormTestHeader.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\User\FormChangePassword.resx">
       <DependentUpon>FormChangePassword.vb</DependentUpon>
@@ -245,6 +360,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report\XtraReport1.resx">
+      <DependentUpon>XtraReport1.vb</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Dataset\DataSetGelombang.xsc">
       <DependentUpon>DataSetGelombang.xsd</DependentUpon>
@@ -256,6 +374,17 @@
     </None>
     <None Include="Dataset\DataSetGelombang.xss">
       <DependentUpon>DataSetGelombang.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DataSetPelengkapPendaftaran.xsc">
+      <DependentUpon>DataSetPelengkapPendaftaran.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DataSetPelengkapPendaftaran.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPelengkapPendaftaran.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Dataset\DataSetPelengkapPendaftaran.xss">
+      <DependentUpon>DataSetPelengkapPendaftaran.xsd</DependentUpon>
     </None>
     <None Include="Dataset\DataSetPendaftaran.xsc">
       <DependentUpon>DataSetPendaftaran.xsd</DependentUpon>
@@ -278,6 +407,28 @@
     </None>
     <None Include="Dataset\DataSetPropertiPendaftaran.xss">
       <DependentUpon>DataSetPropertiPendaftaran.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DataSetReportPendaftarPersiswa.xsc">
+      <DependentUpon>DataSetReportPendaftarPersiswa.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DataSetReportPendaftarPersiswa.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetReportPendaftarPersiswa.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Dataset\DataSetReportPendaftarPersiswa.xss">
+      <DependentUpon>DataSetReportPendaftarPersiswa.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DataSetTest.xsc">
+      <DependentUpon>DataSetTest.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DataSetTest.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetTest.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Dataset\DataSetTest.xss">
+      <DependentUpon>DataSetTest.xsd</DependentUpon>
     </None>
     <None Include="Dataset\DataSetUser.xsc">
       <DependentUpon>DataSetUser.xsd</DependentUpon>
@@ -306,9 +457,7 @@
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Report\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\11301366_361196224081390_575244631_n.png" />
     <None Include="Resources\puzzle.png" />
@@ -319,6 +468,7 @@
     <None Include="Resources\Folder - Users %282%29.ico" />
     <None Include="Resources\11.png" />
     <None Include="Resources\online-registration-icon-png-538.png" />
+    <None Include="Resources\Document %2817%29.ico" />
     <Content Include="Settings\config.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -39,6 +39,7 @@ Partial Class FormPendaftaran
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.MstPendaftarBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.labelInfo = New System.Windows.Forms.ToolStripLabel()
+        Me.buttonPrint = New System.Windows.Forms.ToolStripButton()
         Me.MstPendaftarGridControl = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.colid = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -70,6 +71,11 @@ Partial Class FormPendaftaran
         Me.colidUser = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colstatus = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.DataLayoutControl1 = New DevExpress.XtraDataLayout.DataLayoutControl()
+        Me.buttonNilaiUN = New DevExpress.XtraEditors.SimpleButton()
+        Me.buttonHobi = New DevExpress.XtraEditors.SimpleButton()
+        Me.buttonPengalamanOrganisasi = New DevExpress.XtraEditors.SimpleButton()
+        Me.buttonPendidikanNonFormal = New DevExpress.XtraEditors.SimpleButton()
+        Me.buttonPrestasi = New DevExpress.XtraEditors.SimpleButton()
         Me.idGelombangTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.NomorPendaftaranTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.tanggalPendaftaranDateEdit = New DevExpress.XtraEditors.DateEdit()
@@ -78,7 +84,6 @@ Partial Class FormPendaftaran
         Me.beratBadanTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.tinggiBadanTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.sekolahAsalTextEdit = New DevExpress.XtraEditors.TextEdit()
-        Me.alamatSekolahAsalTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.namaAyahTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.pekerjaanTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.AlamatAyahTextEdit = New DevExpress.XtraEditors.TextEdit()
@@ -96,6 +101,7 @@ Partial Class FormPendaftaran
         Me.idUserTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.statusLookUpEdit = New DevExpress.XtraEditors.LookUpEdit()
         Me.genderTextEdit = New DevExpress.XtraEditors.RadioGroup()
+        Me.alamatSekolahAsalTextEdit = New DevExpress.XtraEditors.MemoEdit()
         Me.ItemForidGelombang = New DevExpress.XtraLayout.LayoutControlItem()
         Me.ItemForNomorPendaftaran = New DevExpress.XtraLayout.LayoutControlItem()
         Me.ItemFortanggalPendaftaran = New DevExpress.XtraLayout.LayoutControlItem()
@@ -112,7 +118,6 @@ Partial Class FormPendaftaran
         Me.ItemForgender = New DevExpress.XtraLayout.LayoutControlItem()
         Me.ItemForsekolahAsal = New DevExpress.XtraLayout.LayoutControlItem()
         Me.ItemForalamatSekolahAsal = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.EmptySpaceItem1 = New DevExpress.XtraLayout.EmptySpaceItem()
         Me.LayoutControlGroup4 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.ItemFornamaAyah = New DevExpress.XtraLayout.LayoutControlItem()
         Me.ItemForpekerjaan = New DevExpress.XtraLayout.LayoutControlItem()
@@ -125,6 +130,13 @@ Partial Class FormPendaftaran
         Me.ItemForidJurusan = New DevExpress.XtraLayout.LayoutControlItem()
         Me.ItemFornomorIjazah = New DevExpress.XtraLayout.LayoutControlItem()
         Me.ItemFornilaiRataRataKelulusan = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem3 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem4 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem5 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem2 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.EmptySpaceItem7 = New DevExpress.XtraLayout.EmptySpaceItem()
+        Me.EmptySpaceItem1 = New DevExpress.XtraLayout.EmptySpaceItem()
+        Me.LayoutControlItem6 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlGroup6 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.ItemForphotoIjazah = New DevExpress.XtraLayout.LayoutControlItem()
         Me.ItemForphotoPelamar = New DevExpress.XtraLayout.LayoutControlItem()
@@ -151,7 +163,6 @@ Partial Class FormPendaftaran
         CType(Me.beratBadanTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tinggiBadanTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.sekolahAsalTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.alamatSekolahAsalTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.namaAyahTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pekerjaanTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AlamatAyahTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -169,6 +180,7 @@ Partial Class FormPendaftaran
         CType(Me.idUserTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.statusLookUpEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.genderTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.alamatSekolahAsalTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ItemForidGelombang, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ItemForNomorPendaftaran, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ItemFortanggalPendaftaran, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -185,7 +197,6 @@ Partial Class FormPendaftaran
         CType(Me.ItemForgender, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ItemForsekolahAsal, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ItemForalamatSekolahAsal, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ItemFornamaAyah, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ItemForpekerjaan, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -198,6 +209,13 @@ Partial Class FormPendaftaran
         CType(Me.ItemForidJurusan, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ItemFornomorIjazah, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ItemFornilaiRataRataKelulusan, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmptySpaceItem7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ItemForphotoIjazah, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ItemForphotoPelamar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -230,7 +248,7 @@ Partial Class FormPendaftaran
         Me.MstPendaftarBindingNavigator.BindingSource = Me.MstPendaftarBindingSource
         Me.MstPendaftarBindingNavigator.CountItem = Me.BindingNavigatorCountItem
         Me.MstPendaftarBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.MstPendaftarBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.MstPendaftarBindingNavigatorSaveItem, Me.labelInfo})
+        Me.MstPendaftarBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.MstPendaftarBindingNavigatorSaveItem, Me.labelInfo, Me.buttonPrint})
         Me.MstPendaftarBindingNavigator.Location = New System.Drawing.Point(0, 0)
         Me.MstPendaftarBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.MstPendaftarBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
@@ -341,20 +359,28 @@ Partial Class FormPendaftaran
         Me.labelInfo.Size = New System.Drawing.Size(88, 22)
         Me.labelInfo.Text = "ToolStripLabel1"
         '
+        'buttonPrint
+        '
+        Me.buttonPrint.Image = CType(resources.GetObject("buttonPrint.Image"), System.Drawing.Image)
+        Me.buttonPrint.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.buttonPrint.Name = "buttonPrint"
+        Me.buttonPrint.Size = New System.Drawing.Size(52, 22)
+        Me.buttonPrint.Text = "Print"
+        '
         'MstPendaftarGridControl
         '
         Me.MstPendaftarGridControl.DataSource = Me.MstPendaftarBindingSource
-        Me.MstPendaftarGridControl.Location = New System.Drawing.Point(12, 418)
+        Me.MstPendaftarGridControl.Location = New System.Drawing.Point(12, 459)
         Me.MstPendaftarGridControl.MainView = Me.GridView1
         Me.MstPendaftarGridControl.Name = "MstPendaftarGridControl"
         Me.MstPendaftarGridControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemLookUpEdit1})
-        Me.MstPendaftarGridControl.Size = New System.Drawing.Size(1177, 323)
+        Me.MstPendaftarGridControl.Size = New System.Drawing.Size(1177, 282)
         Me.MstPendaftarGridControl.TabIndex = 1
         Me.MstPendaftarGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
         'GridView1
         '
-        Me.GridView1.Appearance.OddRow.BackColor = System.Drawing.Color.Red
+        Me.GridView1.Appearance.OddRow.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.GridView1.Appearance.OddRow.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.GridView1.Appearance.OddRow.Options.UseBackColor = True
         Me.GridView1.AppearancePrint.OddRow.Options.UseBackColor = True
@@ -545,6 +571,11 @@ Partial Class FormPendaftaran
         '
         'DataLayoutControl1
         '
+        Me.DataLayoutControl1.Controls.Add(Me.buttonNilaiUN)
+        Me.DataLayoutControl1.Controls.Add(Me.buttonHobi)
+        Me.DataLayoutControl1.Controls.Add(Me.buttonPengalamanOrganisasi)
+        Me.DataLayoutControl1.Controls.Add(Me.buttonPendidikanNonFormal)
+        Me.DataLayoutControl1.Controls.Add(Me.buttonPrestasi)
         Me.DataLayoutControl1.Controls.Add(Me.MstPendaftarGridControl)
         Me.DataLayoutControl1.Controls.Add(Me.idGelombangTextEdit)
         Me.DataLayoutControl1.Controls.Add(Me.NomorPendaftaranTextEdit)
@@ -554,7 +585,6 @@ Partial Class FormPendaftaran
         Me.DataLayoutControl1.Controls.Add(Me.beratBadanTextEdit)
         Me.DataLayoutControl1.Controls.Add(Me.tinggiBadanTextEdit)
         Me.DataLayoutControl1.Controls.Add(Me.sekolahAsalTextEdit)
-        Me.DataLayoutControl1.Controls.Add(Me.alamatSekolahAsalTextEdit)
         Me.DataLayoutControl1.Controls.Add(Me.namaAyahTextEdit)
         Me.DataLayoutControl1.Controls.Add(Me.pekerjaanTextEdit)
         Me.DataLayoutControl1.Controls.Add(Me.AlamatAyahTextEdit)
@@ -571,16 +601,62 @@ Partial Class FormPendaftaran
         Me.DataLayoutControl1.Controls.Add(Me.idUserTextEdit)
         Me.DataLayoutControl1.Controls.Add(Me.statusLookUpEdit)
         Me.DataLayoutControl1.Controls.Add(Me.genderTextEdit)
+        Me.DataLayoutControl1.Controls.Add(Me.alamatSekolahAsalTextEdit)
         Me.DataLayoutControl1.DataSource = Me.MstPendaftarBindingSource
         Me.DataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataLayoutControl1.HiddenItems.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.ItemForidGelombang, Me.ItemForNomorPendaftaran, Me.ItemFortanggalPendaftaran, Me.ItemForstatus, Me.ItemForidUser})
         Me.DataLayoutControl1.Location = New System.Drawing.Point(0, 25)
         Me.DataLayoutControl1.Name = "DataLayoutControl1"
-        Me.DataLayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = New System.Drawing.Rectangle(674, 290, 250, 350)
+        Me.DataLayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = New System.Drawing.Rectangle(1565, 125, 250, 350)
         Me.DataLayoutControl1.Root = Me.LayoutControlGroup1
         Me.DataLayoutControl1.Size = New System.Drawing.Size(1201, 753)
         Me.DataLayoutControl1.TabIndex = 2
         Me.DataLayoutControl1.Text = "DataLayoutControl1"
+        '
+        'buttonNilaiUN
+        '
+        Me.buttonNilaiUN.Location = New System.Drawing.Point(886, 124)
+        Me.buttonNilaiUN.Name = "buttonNilaiUN"
+        Me.buttonNilaiUN.Size = New System.Drawing.Size(291, 22)
+        Me.buttonNilaiUN.StyleController = Me.DataLayoutControl1
+        Me.buttonNilaiUN.TabIndex = 34
+        Me.buttonNilaiUN.Text = "Nilai UN"
+        '
+        'buttonHobi
+        '
+        Me.buttonHobi.Location = New System.Drawing.Point(886, 228)
+        Me.buttonHobi.Name = "buttonHobi"
+        Me.buttonHobi.Size = New System.Drawing.Size(291, 22)
+        Me.buttonHobi.StyleController = Me.DataLayoutControl1
+        Me.buttonHobi.TabIndex = 33
+        Me.buttonHobi.Text = "Hobbi"
+        '
+        'buttonPengalamanOrganisasi
+        '
+        Me.buttonPengalamanOrganisasi.Location = New System.Drawing.Point(886, 202)
+        Me.buttonPengalamanOrganisasi.Name = "buttonPengalamanOrganisasi"
+        Me.buttonPengalamanOrganisasi.Size = New System.Drawing.Size(291, 22)
+        Me.buttonPengalamanOrganisasi.StyleController = Me.DataLayoutControl1
+        Me.buttonPengalamanOrganisasi.TabIndex = 32
+        Me.buttonPengalamanOrganisasi.Text = "PengalamanOrganisasi"
+        '
+        'buttonPendidikanNonFormal
+        '
+        Me.buttonPendidikanNonFormal.Location = New System.Drawing.Point(886, 176)
+        Me.buttonPendidikanNonFormal.Name = "buttonPendidikanNonFormal"
+        Me.buttonPendidikanNonFormal.Size = New System.Drawing.Size(291, 22)
+        Me.buttonPendidikanNonFormal.StyleController = Me.DataLayoutControl1
+        Me.buttonPendidikanNonFormal.TabIndex = 31
+        Me.buttonPendidikanNonFormal.Text = "Pendidikan Non Formal"
+        '
+        'buttonPrestasi
+        '
+        Me.buttonPrestasi.Location = New System.Drawing.Point(886, 150)
+        Me.buttonPrestasi.Name = "buttonPrestasi"
+        Me.buttonPrestasi.Size = New System.Drawing.Size(291, 22)
+        Me.buttonPrestasi.StyleController = Me.DataLayoutControl1
+        Me.buttonPrestasi.TabIndex = 30
+        Me.buttonPrestasi.Text = "Prestasi"
         '
         'idGelombangTextEdit
         '
@@ -669,20 +745,11 @@ Partial Class FormPendaftaran
         'sekolahAsalTextEdit
         '
         Me.sekolahAsalTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.MstPendaftarBindingSource, "sekolahAsal", True))
-        Me.sekolahAsalTextEdit.Location = New System.Drawing.Point(145, 165)
+        Me.sekolahAsalTextEdit.Location = New System.Drawing.Point(145, 168)
         Me.sekolahAsalTextEdit.Name = "sekolahAsalTextEdit"
         Me.sekolahAsalTextEdit.Size = New System.Drawing.Size(313, 20)
         Me.sekolahAsalTextEdit.StyleController = Me.DataLayoutControl1
         Me.sekolahAsalTextEdit.TabIndex = 12
-        '
-        'alamatSekolahAsalTextEdit
-        '
-        Me.alamatSekolahAsalTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.MstPendaftarBindingSource, "alamatSekolahAsal", True))
-        Me.alamatSekolahAsalTextEdit.Location = New System.Drawing.Point(145, 189)
-        Me.alamatSekolahAsalTextEdit.Name = "alamatSekolahAsalTextEdit"
-        Me.alamatSekolahAsalTextEdit.Size = New System.Drawing.Size(313, 20)
-        Me.alamatSekolahAsalTextEdit.StyleController = Me.DataLayoutControl1
-        Me.alamatSekolahAsalTextEdit.TabIndex = 13
         '
         'namaAyahTextEdit
         '
@@ -800,7 +867,7 @@ Partial Class FormPendaftaran
         '
         Me.photoIjazahPictureEdit.Cursor = System.Windows.Forms.Cursors.Default
         Me.photoIjazahPictureEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.MstPendaftarBindingSource, "photoIjazah", True))
-        Me.photoIjazahPictureEdit.Location = New System.Drawing.Point(146, 271)
+        Me.photoIjazahPictureEdit.Location = New System.Drawing.Point(146, 312)
         Me.photoIjazahPictureEdit.Name = "photoIjazahPictureEdit"
         Me.photoIjazahPictureEdit.Properties.PictureStoreMode = DevExpress.XtraEditors.Controls.PictureStoreMode.ByteArray
         Me.photoIjazahPictureEdit.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.[Auto]
@@ -814,11 +881,11 @@ Partial Class FormPendaftaran
         '
         Me.photoPelamarPictureEdit.Cursor = System.Windows.Forms.Cursors.Default
         Me.photoPelamarPictureEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.MstPendaftarBindingSource, "photoPelamar", True))
-        Me.photoPelamarPictureEdit.Location = New System.Drawing.Point(24, 271)
+        Me.photoPelamarPictureEdit.Location = New System.Drawing.Point(24, 312)
         Me.photoPelamarPictureEdit.Name = "photoPelamarPictureEdit"
         Me.photoPelamarPictureEdit.Properties.PictureStoreMode = DevExpress.XtraEditors.Controls.PictureStoreMode.ByteArray
         Me.photoPelamarPictureEdit.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.[Auto]
-        Me.photoPelamarPictureEdit.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch
+        Me.photoPelamarPictureEdit.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze
         Me.photoPelamarPictureEdit.Properties.ZoomAccelerationFactor = 1.0R
         Me.photoPelamarPictureEdit.Size = New System.Drawing.Size(118, 131)
         Me.photoPelamarPictureEdit.StyleController = Me.DataLayoutControl1
@@ -828,7 +895,7 @@ Partial Class FormPendaftaran
         '
         Me.PhotoKartuKeluargaPictureEdit.Cursor = System.Windows.Forms.Cursors.Default
         Me.PhotoKartuKeluargaPictureEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.MstPendaftarBindingSource, "PhotoKartuKeluarga", True))
-        Me.PhotoKartuKeluargaPictureEdit.Location = New System.Drawing.Point(662, 271)
+        Me.PhotoKartuKeluargaPictureEdit.Location = New System.Drawing.Point(662, 312)
         Me.PhotoKartuKeluargaPictureEdit.Name = "PhotoKartuKeluargaPictureEdit"
         Me.PhotoKartuKeluargaPictureEdit.Properties.PictureStoreMode = DevExpress.XtraEditors.Controls.PictureStoreMode.ByteArray
         Me.PhotoKartuKeluargaPictureEdit.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.[Auto]
@@ -878,9 +945,18 @@ Partial Class FormPendaftaran
         Me.genderTextEdit.Properties.Columns = 2
         Me.genderTextEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.[Default]
         Me.genderTextEdit.Properties.Items.AddRange(New DevExpress.XtraEditors.Controls.RadioGroupItem() {New DevExpress.XtraEditors.Controls.RadioGroupItem(1, "Laki-Laki"), New DevExpress.XtraEditors.Controls.RadioGroupItem(0, "Perempuan")})
-        Me.genderTextEdit.Size = New System.Drawing.Size(259, 23)
+        Me.genderTextEdit.Size = New System.Drawing.Size(313, 26)
         Me.genderTextEdit.StyleController = Me.DataLayoutControl1
         Me.genderTextEdit.TabIndex = 11
+        '
+        'alamatSekolahAsalTextEdit
+        '
+        Me.alamatSekolahAsalTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.MstPendaftarBindingSource, "alamatSekolahAsal", True))
+        Me.alamatSekolahAsalTextEdit.Location = New System.Drawing.Point(145, 192)
+        Me.alamatSekolahAsalTextEdit.Name = "alamatSekolahAsalTextEdit"
+        Me.alamatSekolahAsalTextEdit.Size = New System.Drawing.Size(313, 58)
+        Me.alamatSekolahAsalTextEdit.StyleController = Me.DataLayoutControl1
+        Me.alamatSekolahAsalTextEdit.TabIndex = 13
         '
         'ItemForidGelombang
         '
@@ -949,18 +1025,18 @@ Partial Class FormPendaftaran
         'LayoutControlItem1
         '
         Me.LayoutControlItem1.Control = Me.MstPendaftarGridControl
-        Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 406)
+        Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 447)
         Me.LayoutControlItem1.Name = "LayoutControlItem1"
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(1181, 327)
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(1181, 286)
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem1.TextVisible = False
         '
         'LayoutControlGroup3
         '
-        Me.LayoutControlGroup3.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.ItemFornama, Me.ItemFortanggalLahir, Me.ItemForberatBadan, Me.ItemFortinggiBadan, Me.ItemForgender, Me.ItemForsekolahAsal, Me.ItemForalamatSekolahAsal, Me.EmptySpaceItem1})
+        Me.LayoutControlGroup3.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.ItemFornama, Me.ItemFortanggalLahir, Me.ItemForberatBadan, Me.ItemFortinggiBadan, Me.ItemForgender, Me.ItemForsekolahAsal, Me.ItemForalamatSekolahAsal})
         Me.LayoutControlGroup3.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup3.Name = "LayoutControlGroup3"
-        Me.LayoutControlGroup3.Size = New System.Drawing.Size(462, 213)
+        Me.LayoutControlGroup3.Size = New System.Drawing.Size(462, 254)
         Me.LayoutControlGroup3.Text = "Detail Calon Peserta Didik"
         '
         'ItemFornama
@@ -1004,14 +1080,14 @@ Partial Class FormPendaftaran
         Me.ItemForgender.Control = Me.genderTextEdit
         Me.ItemForgender.Location = New System.Drawing.Point(0, 96)
         Me.ItemForgender.Name = "ItemForgender"
-        Me.ItemForgender.Size = New System.Drawing.Size(384, 27)
+        Me.ItemForgender.Size = New System.Drawing.Size(438, 30)
         Me.ItemForgender.Text = "gender"
         Me.ItemForgender.TextSize = New System.Drawing.Size(118, 13)
         '
         'ItemForsekolahAsal
         '
         Me.ItemForsekolahAsal.Control = Me.sekolahAsalTextEdit
-        Me.ItemForsekolahAsal.Location = New System.Drawing.Point(0, 123)
+        Me.ItemForsekolahAsal.Location = New System.Drawing.Point(0, 126)
         Me.ItemForsekolahAsal.Name = "ItemForsekolahAsal"
         Me.ItemForsekolahAsal.Size = New System.Drawing.Size(438, 24)
         Me.ItemForsekolahAsal.Text = "sekolah Asal"
@@ -1020,26 +1096,18 @@ Partial Class FormPendaftaran
         'ItemForalamatSekolahAsal
         '
         Me.ItemForalamatSekolahAsal.Control = Me.alamatSekolahAsalTextEdit
-        Me.ItemForalamatSekolahAsal.Location = New System.Drawing.Point(0, 147)
+        Me.ItemForalamatSekolahAsal.Location = New System.Drawing.Point(0, 150)
         Me.ItemForalamatSekolahAsal.Name = "ItemForalamatSekolahAsal"
-        Me.ItemForalamatSekolahAsal.Size = New System.Drawing.Size(438, 24)
+        Me.ItemForalamatSekolahAsal.Size = New System.Drawing.Size(438, 62)
         Me.ItemForalamatSekolahAsal.Text = "alamat Sekolah Asal"
         Me.ItemForalamatSekolahAsal.TextSize = New System.Drawing.Size(118, 13)
-        '
-        'EmptySpaceItem1
-        '
-        Me.EmptySpaceItem1.AllowHotTrack = False
-        Me.EmptySpaceItem1.Location = New System.Drawing.Point(384, 96)
-        Me.EmptySpaceItem1.Name = "EmptySpaceItem1"
-        Me.EmptySpaceItem1.Size = New System.Drawing.Size(54, 27)
-        Me.EmptySpaceItem1.TextSize = New System.Drawing.Size(0, 0)
         '
         'LayoutControlGroup4
         '
         Me.LayoutControlGroup4.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.ItemFornamaAyah, Me.ItemForpekerjaan, Me.ItemForAlamatAyah, Me.ItemForNamaIbu, Me.ItemForpekerjaanIbu, Me.ItemForalamatIbu, Me.ItemForpenghasilanOrangTua})
         Me.LayoutControlGroup4.Location = New System.Drawing.Point(462, 0)
         Me.LayoutControlGroup4.Name = "LayoutControlGroup4"
-        Me.LayoutControlGroup4.Size = New System.Drawing.Size(390, 213)
+        Me.LayoutControlGroup4.Size = New System.Drawing.Size(390, 254)
         Me.LayoutControlGroup4.Text = "Data Orang Tua Calon Peserta Didik"
         '
         'ItemFornamaAyah
@@ -1101,16 +1169,16 @@ Partial Class FormPendaftaran
         Me.ItemForpenghasilanOrangTua.Control = Me.penghasilanOrangTuaTextEdit
         Me.ItemForpenghasilanOrangTua.Location = New System.Drawing.Point(0, 144)
         Me.ItemForpenghasilanOrangTua.Name = "ItemForpenghasilanOrangTua"
-        Me.ItemForpenghasilanOrangTua.Size = New System.Drawing.Size(366, 27)
+        Me.ItemForpenghasilanOrangTua.Size = New System.Drawing.Size(366, 68)
         Me.ItemForpenghasilanOrangTua.Text = "penghasilan Orang Tua"
         Me.ItemForpenghasilanOrangTua.TextSize = New System.Drawing.Size(118, 13)
         '
         'LayoutControlGroup5
         '
-        Me.LayoutControlGroup5.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.ItemForidJurusan, Me.ItemFornomorIjazah, Me.ItemFornilaiRataRataKelulusan})
+        Me.LayoutControlGroup5.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.ItemForidJurusan, Me.ItemFornomorIjazah, Me.ItemFornilaiRataRataKelulusan, Me.LayoutControlItem3, Me.LayoutControlItem4, Me.LayoutControlItem5, Me.LayoutControlItem2, Me.EmptySpaceItem7, Me.EmptySpaceItem1, Me.LayoutControlItem6})
         Me.LayoutControlGroup5.Location = New System.Drawing.Point(852, 0)
         Me.LayoutControlGroup5.Name = "LayoutControlGroup5"
-        Me.LayoutControlGroup5.Size = New System.Drawing.Size(329, 213)
+        Me.LayoutControlGroup5.Size = New System.Drawing.Size(329, 254)
         Me.LayoutControlGroup5.Text = "Data"
         '
         'ItemForidJurusan
@@ -1136,14 +1204,75 @@ Partial Class FormPendaftaran
         Me.ItemFornilaiRataRataKelulusan.Control = Me.nilaiRataRataKelulusanTextEdit
         Me.ItemFornilaiRataRataKelulusan.Location = New System.Drawing.Point(0, 48)
         Me.ItemFornilaiRataRataKelulusan.Name = "ItemFornilaiRataRataKelulusan"
-        Me.ItemFornilaiRataRataKelulusan.Size = New System.Drawing.Size(305, 123)
+        Me.ItemFornilaiRataRataKelulusan.Size = New System.Drawing.Size(305, 24)
         Me.ItemFornilaiRataRataKelulusan.Text = "nilai Rata Rata Kelulusan"
         Me.ItemFornilaiRataRataKelulusan.TextSize = New System.Drawing.Size(118, 13)
+        '
+        'LayoutControlItem3
+        '
+        Me.LayoutControlItem3.Control = Me.buttonPrestasi
+        Me.LayoutControlItem3.Location = New System.Drawing.Point(10, 108)
+        Me.LayoutControlItem3.Name = "LayoutControlItem3"
+        Me.LayoutControlItem3.Size = New System.Drawing.Size(295, 26)
+        Me.LayoutControlItem3.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem3.TextVisible = False
+        '
+        'LayoutControlItem4
+        '
+        Me.LayoutControlItem4.Control = Me.buttonPendidikanNonFormal
+        Me.LayoutControlItem4.Location = New System.Drawing.Point(10, 134)
+        Me.LayoutControlItem4.Name = "LayoutControlItem4"
+        Me.LayoutControlItem4.Size = New System.Drawing.Size(295, 26)
+        Me.LayoutControlItem4.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem4.TextVisible = False
+        '
+        'LayoutControlItem5
+        '
+        Me.LayoutControlItem5.Control = Me.buttonPengalamanOrganisasi
+        Me.LayoutControlItem5.Location = New System.Drawing.Point(10, 160)
+        Me.LayoutControlItem5.Name = "LayoutControlItem5"
+        Me.LayoutControlItem5.Size = New System.Drawing.Size(295, 26)
+        Me.LayoutControlItem5.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem5.TextVisible = False
+        '
+        'LayoutControlItem2
+        '
+        Me.LayoutControlItem2.Control = Me.buttonNilaiUN
+        Me.LayoutControlItem2.Location = New System.Drawing.Point(10, 82)
+        Me.LayoutControlItem2.Name = "LayoutControlItem2"
+        Me.LayoutControlItem2.Size = New System.Drawing.Size(295, 26)
+        Me.LayoutControlItem2.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem2.TextVisible = False
+        '
+        'EmptySpaceItem7
+        '
+        Me.EmptySpaceItem7.AllowHotTrack = False
+        Me.EmptySpaceItem7.Location = New System.Drawing.Point(0, 72)
+        Me.EmptySpaceItem7.Name = "EmptySpaceItem7"
+        Me.EmptySpaceItem7.Size = New System.Drawing.Size(10, 140)
+        Me.EmptySpaceItem7.TextSize = New System.Drawing.Size(0, 0)
+        '
+        'EmptySpaceItem1
+        '
+        Me.EmptySpaceItem1.AllowHotTrack = False
+        Me.EmptySpaceItem1.Location = New System.Drawing.Point(10, 72)
+        Me.EmptySpaceItem1.Name = "EmptySpaceItem1"
+        Me.EmptySpaceItem1.Size = New System.Drawing.Size(295, 10)
+        Me.EmptySpaceItem1.TextSize = New System.Drawing.Size(0, 0)
+        '
+        'LayoutControlItem6
+        '
+        Me.LayoutControlItem6.Control = Me.buttonHobi
+        Me.LayoutControlItem6.Location = New System.Drawing.Point(10, 186)
+        Me.LayoutControlItem6.Name = "LayoutControlItem6"
+        Me.LayoutControlItem6.Size = New System.Drawing.Size(295, 26)
+        Me.LayoutControlItem6.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem6.TextVisible = False
         '
         'LayoutControlGroup6
         '
         Me.LayoutControlGroup6.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.ItemForphotoIjazah, Me.ItemForphotoPelamar, Me.ItemForPhotoKartuKeluarga})
-        Me.LayoutControlGroup6.Location = New System.Drawing.Point(0, 213)
+        Me.LayoutControlGroup6.Location = New System.Drawing.Point(0, 254)
         Me.LayoutControlGroup6.Name = "LayoutControlGroup6"
         Me.LayoutControlGroup6.Size = New System.Drawing.Size(1181, 193)
         Me.LayoutControlGroup6.Text = "Dokumen Gambar"
@@ -1166,8 +1295,11 @@ Partial Class FormPendaftaran
         '
         Me.ItemForphotoPelamar.Control = Me.photoPelamarPictureEdit
         Me.ItemForphotoPelamar.Location = New System.Drawing.Point(0, 0)
+        Me.ItemForphotoPelamar.MaxSize = New System.Drawing.Size(122, 151)
+        Me.ItemForphotoPelamar.MinSize = New System.Drawing.Size(122, 151)
         Me.ItemForphotoPelamar.Name = "ItemForphotoPelamar"
         Me.ItemForphotoPelamar.Size = New System.Drawing.Size(122, 151)
+        Me.ItemForphotoPelamar.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom
         Me.ItemForphotoPelamar.StartNewLine = True
         Me.ItemForphotoPelamar.Text = "photo Pelamar"
         Me.ItemForphotoPelamar.TextLocation = DevExpress.Utils.Locations.Top
@@ -1225,7 +1357,6 @@ Partial Class FormPendaftaran
         CType(Me.beratBadanTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tinggiBadanTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.sekolahAsalTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.alamatSekolahAsalTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.namaAyahTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pekerjaanTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AlamatAyahTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1243,6 +1374,7 @@ Partial Class FormPendaftaran
         CType(Me.idUserTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.statusLookUpEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.genderTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.alamatSekolahAsalTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ItemForidGelombang, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ItemForNomorPendaftaran, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ItemFortanggalPendaftaran, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1259,7 +1391,6 @@ Partial Class FormPendaftaran
         CType(Me.ItemForgender, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ItemForsekolahAsal, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ItemForalamatSekolahAsal, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ItemFornamaAyah, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ItemForpekerjaan, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1272,6 +1403,13 @@ Partial Class FormPendaftaran
         CType(Me.ItemForidJurusan, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ItemFornomorIjazah, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ItemFornilaiRataRataKelulusan, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmptySpaceItem7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ItemForphotoIjazah, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ItemForphotoPelamar, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1335,7 +1473,6 @@ Partial Class FormPendaftaran
     Friend WithEvents beratBadanTextEdit As TextEdit
     Friend WithEvents tinggiBadanTextEdit As TextEdit
     Friend WithEvents sekolahAsalTextEdit As TextEdit
-    Friend WithEvents alamatSekolahAsalTextEdit As TextEdit
     Friend WithEvents namaAyahTextEdit As TextEdit
     Friend WithEvents pekerjaanTextEdit As TextEdit
     Friend WithEvents AlamatAyahTextEdit As TextEdit
@@ -1386,9 +1523,22 @@ Partial Class FormPendaftaran
     Friend WithEvents LayoutControlGroup3 As XtraLayout.LayoutControlGroup
     Friend WithEvents LayoutControlGroup4 As XtraLayout.LayoutControlGroup
     Friend WithEvents LayoutControlGroup5 As XtraLayout.LayoutControlGroup
-    Friend WithEvents EmptySpaceItem1 As XtraLayout.EmptySpaceItem
     Friend WithEvents LayoutControlGroup6 As XtraLayout.LayoutControlGroup
     Friend WithEvents RepositoryItemLookUpEdit1 As Repository.RepositoryItemLookUpEdit
     Friend WithEvents MstJurusanBindingSource As BindingSource
     Friend WithEvents MstJurusanTableAdapter As DataSetPendaftaranTableAdapters.mstJurusanTableAdapter
+    Friend WithEvents buttonHobi As SimpleButton
+    Friend WithEvents buttonPengalamanOrganisasi As SimpleButton
+    Friend WithEvents buttonPendidikanNonFormal As SimpleButton
+    Friend WithEvents buttonPrestasi As SimpleButton
+    Friend WithEvents alamatSekolahAsalTextEdit As MemoEdit
+    Friend WithEvents LayoutControlItem3 As XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem4 As XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem5 As XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem6 As XtraLayout.LayoutControlItem
+    Friend WithEvents buttonNilaiUN As SimpleButton
+    Friend WithEvents LayoutControlItem2 As XtraLayout.LayoutControlItem
+    Friend WithEvents EmptySpaceItem7 As XtraLayout.EmptySpaceItem
+    Friend WithEvents EmptySpaceItem1 As XtraLayout.EmptySpaceItem
+    Friend WithEvents buttonPrint As ToolStripButton
 End Class

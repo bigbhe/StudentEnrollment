@@ -2,8 +2,12 @@
 
 Public Class ClassActiveUser
 #Region "private members"
+
     Private _username As String
     Private _password As String
+
+
+
 #End Region
 
 #Region "public members - User information"

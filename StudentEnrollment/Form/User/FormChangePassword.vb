@@ -52,7 +52,7 @@
         Try
             Me.GetChangePasswordTableAdapter.Fill(Me.DataSetUser.getChangePassword, New System.Nullable(Of Integer)(CType(aUser.IDUser, Integer)))
         Catch ex As System.Exception
-            System.Windows.Forms.MessageBox.Show(ex.Message)
+            MessageBox.Show(ex.Message)
         End Try
 
     End Sub

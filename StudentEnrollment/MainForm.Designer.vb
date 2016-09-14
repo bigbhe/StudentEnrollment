@@ -39,6 +39,8 @@
         Me.menuPendaftaran = New DevExpress.XtraBars.BarButtonItem()
         Me.menuStatus = New DevExpress.XtraBars.BarButtonItem()
         Me.menuGelombang = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem1 = New DevExpress.XtraBars.BarButtonItem()
+        Me.menuHeaderTest = New DevExpress.XtraBars.BarButtonItem()
         Me.RibbonPage2 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup3 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPage3 = New DevExpress.XtraBars.Ribbon.RibbonPage()
@@ -48,23 +50,26 @@
         Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.ribbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.ribbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.RibbonPageGroup6 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RepositoryItemTextEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemTextEdit()
         Me.RibbonStatusBar1 = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
         Me.mdiManager = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(Me.components)
         Me.tmrMain = New System.Windows.Forms.Timer(Me.components)
+        Me.tnm = New DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager(Me.components)
         CType(Me.ribbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BarAndDockingController1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.mdiManager, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tnm, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ribbonControl1
         '
         Me.ribbonControl1.Controller = Me.BarAndDockingController1
         Me.ribbonControl1.ExpandCollapseItem.Id = 0
-        Me.ribbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl1.ExpandCollapseItem, Me.SkinRibbonGalleryBarItem1, Me.labelDateTime, Me.BarDockingMenuItem1, Me.labelFullName, Me.menuUser, Me.menuChangePassword, Me.menuMstHobi, Me.menuMstJurusan, Me.menuMstMataPelajaran, Me.menuMstTest, Me.menuPendaftaran, Me.menuStatus, Me.menuGelombang})
+        Me.ribbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl1.ExpandCollapseItem, Me.SkinRibbonGalleryBarItem1, Me.labelDateTime, Me.BarDockingMenuItem1, Me.labelFullName, Me.menuUser, Me.menuChangePassword, Me.menuMstHobi, Me.menuMstJurusan, Me.menuMstMataPelajaran, Me.menuMstTest, Me.menuPendaftaran, Me.menuStatus, Me.menuGelombang, Me.BarButtonItem1, Me.menuHeaderTest})
         Me.ribbonControl1.Location = New System.Drawing.Point(0, 0)
-        Me.ribbonControl1.MaxItemId = 13
+        Me.ribbonControl1.MaxItemId = 15
         Me.ribbonControl1.Name = "ribbonControl1"
         Me.ribbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage2, Me.RibbonPage3, Me.rpSettings, Me.ribbonPage1})
         Me.ribbonControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemTextEdit1})
@@ -177,6 +182,20 @@
         Me.menuGelombang.Name = "menuGelombang"
         Me.menuGelombang.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
+        'BarButtonItem1
+        '
+        Me.BarButtonItem1.Caption = "BarButtonItem1"
+        Me.BarButtonItem1.Id = 13
+        Me.BarButtonItem1.Name = "BarButtonItem1"
+        '
+        'menuHeaderTest
+        '
+        Me.menuHeaderTest.Caption = "Test"
+        Me.menuHeaderTest.Glyph = Global.StudentEnrollment.My.Resources.Resources.Document__17_
+        Me.menuHeaderTest.Id = 14
+        Me.menuHeaderTest.Name = "menuHeaderTest"
+        Me.menuHeaderTest.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        '
         'RibbonPage2
         '
         Me.RibbonPage2.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup3})
@@ -209,6 +228,7 @@
         'RibbonPageGroup4
         '
         Me.RibbonPageGroup4.ItemLinks.Add(Me.menuPendaftaran)
+        Me.RibbonPageGroup4.ItemLinks.Add(Me.menuHeaderTest)
         Me.RibbonPageGroup4.Name = "RibbonPageGroup4"
         Me.RibbonPageGroup4.Text = "Pendaftaran"
         '
@@ -228,7 +248,7 @@
         '
         'ribbonPage1
         '
-        Me.ribbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.ribbonPageGroup1})
+        Me.ribbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.ribbonPageGroup1, Me.RibbonPageGroup6})
         Me.ribbonPage1.KeyTip = "R"
         Me.ribbonPage1.Name = "ribbonPage1"
         Me.ribbonPage1.Text = "ribbonPage1"
@@ -239,6 +259,12 @@
         Me.ribbonPageGroup1.ItemLinks.Add(Me.menuChangePassword)
         Me.ribbonPageGroup1.Name = "ribbonPageGroup1"
         Me.ribbonPageGroup1.Text = "User"
+        '
+        'RibbonPageGroup6
+        '
+        Me.RibbonPageGroup6.ItemLinks.Add(Me.BarButtonItem1)
+        Me.RibbonPageGroup6.Name = "RibbonPageGroup6"
+        Me.RibbonPageGroup6.Text = "RibbonPageGroup6"
         '
         'RepositoryItemTextEdit1
         '
@@ -263,6 +289,14 @@
         '
         Me.tmrMain.Enabled = True
         '
+        'tnm
+        '
+        Me.tnm.ApplicationId = "c55ce992-75d5-4c1b-954c-b3229c6190be"
+        Me.tnm.ApplicationName = "StudentEnrollment"
+        Me.tnm.Notifications.AddRange(New DevExpress.XtraBars.ToastNotifications.IToastNotificationProperties() {New DevExpress.XtraBars.ToastNotifications.ToastNotification("25b982ff-1318-4617-8b20-3c8411ff5407", Nothing, "Pellentesque lacinia tellus eget volutpat", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor i" &
+                    "ncididunt ut labore et dolore magna aliqua.", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor i" &
+                    "ncididunt ut labore et dolore magna aliqua.", DevExpress.XtraBars.ToastNotifications.ToastNotificationTemplate.Text01)})
+        '
         'MainForm
         '
         Me.AllowFormGlass = DevExpress.Utils.DefaultBoolean.[False]
@@ -281,6 +315,7 @@
         CType(Me.BarAndDockingController1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.mdiManager, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tnm, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -316,4 +351,8 @@
     Friend WithEvents menuStatus As XtraBars.BarButtonItem
     Friend WithEvents menuGelombang As XtraBars.BarButtonItem
     Friend WithEvents RibbonPageGroup5 As XtraBars.Ribbon.RibbonPageGroup
+    Friend WithEvents BarButtonItem1 As XtraBars.BarButtonItem
+    Friend WithEvents RibbonPageGroup6 As XtraBars.Ribbon.RibbonPageGroup
+    Friend WithEvents tnm As XtraBars.ToastNotifications.ToastNotificationsManager
+    Friend WithEvents menuHeaderTest As XtraBars.BarButtonItem
 End Class
