@@ -41,6 +41,7 @@
         Me.menuGelombang = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem1 = New DevExpress.XtraBars.BarButtonItem()
         Me.menuHeaderTest = New DevExpress.XtraBars.BarButtonItem()
+        Me.reportByDate = New DevExpress.XtraBars.BarButtonItem()
         Me.RibbonPage2 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup3 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPage3 = New DevExpress.XtraBars.Ribbon.RibbonPage()
@@ -56,6 +57,7 @@
         Me.mdiManager = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(Me.components)
         Me.tmrMain = New System.Windows.Forms.Timer(Me.components)
         Me.tnm = New DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager(Me.components)
+        Me.laporanKelulusan = New DevExpress.XtraBars.BarButtonItem()
         CType(Me.ribbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BarAndDockingController1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -67,9 +69,9 @@
         '
         Me.ribbonControl1.Controller = Me.BarAndDockingController1
         Me.ribbonControl1.ExpandCollapseItem.Id = 0
-        Me.ribbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl1.ExpandCollapseItem, Me.SkinRibbonGalleryBarItem1, Me.labelDateTime, Me.BarDockingMenuItem1, Me.labelFullName, Me.menuUser, Me.menuChangePassword, Me.menuMstHobi, Me.menuMstJurusan, Me.menuMstMataPelajaran, Me.menuMstTest, Me.menuPendaftaran, Me.menuStatus, Me.menuGelombang, Me.BarButtonItem1, Me.menuHeaderTest})
+        Me.ribbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl1.ExpandCollapseItem, Me.SkinRibbonGalleryBarItem1, Me.labelDateTime, Me.BarDockingMenuItem1, Me.labelFullName, Me.menuUser, Me.menuChangePassword, Me.menuMstHobi, Me.menuMstJurusan, Me.menuMstMataPelajaran, Me.menuMstTest, Me.menuPendaftaran, Me.menuStatus, Me.menuGelombang, Me.BarButtonItem1, Me.menuHeaderTest, Me.reportByDate, Me.laporanKelulusan})
         Me.ribbonControl1.Location = New System.Drawing.Point(0, 0)
-        Me.ribbonControl1.MaxItemId = 15
+        Me.ribbonControl1.MaxItemId = 17
         Me.ribbonControl1.Name = "ribbonControl1"
         Me.ribbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage2, Me.RibbonPage3, Me.rpSettings, Me.ribbonPage1})
         Me.ribbonControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemTextEdit1})
@@ -184,9 +186,11 @@
         '
         'BarButtonItem1
         '
-        Me.BarButtonItem1.Caption = "BarButtonItem1"
+        Me.BarButtonItem1.Caption = "Advanced Report"
+        Me.BarButtonItem1.Glyph = CType(resources.GetObject("BarButtonItem1.Glyph"), System.Drawing.Image)
         Me.BarButtonItem1.Id = 13
         Me.BarButtonItem1.Name = "BarButtonItem1"
+        Me.BarButtonItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
         'menuHeaderTest
         '
@@ -195,6 +199,14 @@
         Me.menuHeaderTest.Id = 14
         Me.menuHeaderTest.Name = "menuHeaderTest"
         Me.menuHeaderTest.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        '
+        'reportByDate
+        '
+        Me.reportByDate.Caption = "Laporan Pendaftaran"
+        Me.reportByDate.Glyph = CType(resources.GetObject("reportByDate.Glyph"), System.Drawing.Image)
+        Me.reportByDate.Id = 15
+        Me.reportByDate.Name = "reportByDate"
+        Me.reportByDate.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
         'RibbonPage2
         '
@@ -263,6 +275,8 @@
         'RibbonPageGroup6
         '
         Me.RibbonPageGroup6.ItemLinks.Add(Me.BarButtonItem1)
+        Me.RibbonPageGroup6.ItemLinks.Add(Me.reportByDate)
+        Me.RibbonPageGroup6.ItemLinks.Add(Me.laporanKelulusan)
         Me.RibbonPageGroup6.Name = "RibbonPageGroup6"
         Me.RibbonPageGroup6.Text = "RibbonPageGroup6"
         '
@@ -296,6 +310,14 @@
         Me.tnm.Notifications.AddRange(New DevExpress.XtraBars.ToastNotifications.IToastNotificationProperties() {New DevExpress.XtraBars.ToastNotifications.ToastNotification("25b982ff-1318-4617-8b20-3c8411ff5407", Nothing, "Pellentesque lacinia tellus eget volutpat", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor i" &
                     "ncididunt ut labore et dolore magna aliqua.", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor i" &
                     "ncididunt ut labore et dolore magna aliqua.", DevExpress.XtraBars.ToastNotifications.ToastNotificationTemplate.Text01)})
+        '
+        'laporanKelulusan
+        '
+        Me.laporanKelulusan.Caption = "Laporan Kelulusan"
+        Me.laporanKelulusan.Glyph = CType(resources.GetObject("laporanKelulusan.Glyph"), System.Drawing.Image)
+        Me.laporanKelulusan.Id = 16
+        Me.laporanKelulusan.Name = "laporanKelulusan"
+        Me.laporanKelulusan.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
         'MainForm
         '
@@ -355,4 +377,6 @@
     Friend WithEvents RibbonPageGroup6 As XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents tnm As XtraBars.ToastNotifications.ToastNotificationsManager
     Friend WithEvents menuHeaderTest As XtraBars.BarButtonItem
+    Friend WithEvents reportByDate As XtraBars.BarButtonItem
+    Friend WithEvents laporanKelulusan As XtraBars.BarButtonItem
 End Class

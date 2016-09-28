@@ -82,7 +82,10 @@ Partial Public Class MainForm
     End Sub
 
     Private Sub BarButtonItem1_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles BarButtonItem1.ItemClick
-        tnm.ShowNotification(1)
+        snapReport.ShowDialog()
+
+
+
     End Sub
 
     Private Sub menuHeaderTest_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles menuHeaderTest.ItemClick
@@ -92,5 +95,15 @@ Partial Public Class MainForm
             FormTestHeader.MdiParent = Me
             FormTestHeader.Show()
         End If
+    End Sub
+
+    Private Sub reportByDate_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles reportByDate.ItemClick
+        FormReportPendaftaranTanggal.ShowDialog()
+
+    End Sub
+
+    Private Sub laporanKelulusan_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles laporanKelulusan.ItemClick
+        ReportKeteranganLulus.ShowDialog()
+
     End Sub
 End Class

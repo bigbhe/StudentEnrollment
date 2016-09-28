@@ -39,6 +39,18 @@ Partial Public Class DataSetReportPendaftarPersiswa
     
     Private tabledataTest As dataTestDataTable
     
+    Private relationdataSiswaPP_dataPendidikanNonFormalPP As Global.System.Data.DataRelation
+    
+    Private relationdataSiswaPP_dataPrestasiPP As Global.System.Data.DataRelation
+    
+    Private relationdataSiswaPP_dataHobiPP As Global.System.Data.DataRelation
+    
+    Private relationdataSiswaPP_datapengalamanOrganisasi As Global.System.Data.DataRelation
+    
+    Private relationdataSiswaPP_dataNilaiUNPP As Global.System.Data.DataRelation
+    
+    Private relationdataSiswaPP_dataTest As Global.System.Data.DataRelation
+    
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -338,6 +350,12 @@ Partial Public Class DataSetReportPendaftarPersiswa
                 Me.tabledataTest.InitVars
             End If
         End If
+        Me.relationdataSiswaPP_dataPendidikanNonFormalPP = Me.Relations("dataSiswaPP_dataPendidikanNonFormalPP")
+        Me.relationdataSiswaPP_dataPrestasiPP = Me.Relations("dataSiswaPP_dataPrestasiPP")
+        Me.relationdataSiswaPP_dataHobiPP = Me.Relations("dataSiswaPP_dataHobiPP")
+        Me.relationdataSiswaPP_datapengalamanOrganisasi = Me.Relations("dataSiswaPP_datapengalamanOrganisasi")
+        Me.relationdataSiswaPP_dataNilaiUNPP = Me.Relations("dataSiswaPP_dataNilaiUNPP")
+        Me.relationdataSiswaPP_dataTest = Me.Relations("dataSiswaPP_dataTest")
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -362,6 +380,18 @@ Partial Public Class DataSetReportPendaftarPersiswa
         MyBase.Tables.Add(Me.tabledataSiswaPP)
         Me.tabledataTest = New dataTestDataTable()
         MyBase.Tables.Add(Me.tabledataTest)
+        Me.relationdataSiswaPP_dataPendidikanNonFormalPP = New Global.System.Data.DataRelation("dataSiswaPP_dataPendidikanNonFormalPP", New Global.System.Data.DataColumn() {Me.tabledataSiswaPP.idColumn}, New Global.System.Data.DataColumn() {Me.tabledataPendidikanNonFormalPP.idColumn}, false)
+        Me.Relations.Add(Me.relationdataSiswaPP_dataPendidikanNonFormalPP)
+        Me.relationdataSiswaPP_dataPrestasiPP = New Global.System.Data.DataRelation("dataSiswaPP_dataPrestasiPP", New Global.System.Data.DataColumn() {Me.tabledataSiswaPP.idColumn}, New Global.System.Data.DataColumn() {Me.tabledataPrestasiPP.idColumn}, false)
+        Me.Relations.Add(Me.relationdataSiswaPP_dataPrestasiPP)
+        Me.relationdataSiswaPP_dataHobiPP = New Global.System.Data.DataRelation("dataSiswaPP_dataHobiPP", New Global.System.Data.DataColumn() {Me.tabledataSiswaPP.idColumn}, New Global.System.Data.DataColumn() {Me.tabledataHobiPP.idColumn}, false)
+        Me.Relations.Add(Me.relationdataSiswaPP_dataHobiPP)
+        Me.relationdataSiswaPP_datapengalamanOrganisasi = New Global.System.Data.DataRelation("dataSiswaPP_datapengalamanOrganisasi", New Global.System.Data.DataColumn() {Me.tabledataSiswaPP.idColumn}, New Global.System.Data.DataColumn() {Me.tabledatapengalamanOrganisasi.idColumn}, false)
+        Me.Relations.Add(Me.relationdataSiswaPP_datapengalamanOrganisasi)
+        Me.relationdataSiswaPP_dataNilaiUNPP = New Global.System.Data.DataRelation("dataSiswaPP_dataNilaiUNPP", New Global.System.Data.DataColumn() {Me.tabledataSiswaPP.idColumn}, New Global.System.Data.DataColumn() {Me.tabledataNilaiUNPP.idColumn}, false)
+        Me.Relations.Add(Me.relationdataSiswaPP_dataNilaiUNPP)
+        Me.relationdataSiswaPP_dataTest = New Global.System.Data.DataRelation("dataSiswaPP_dataTest", New Global.System.Data.DataColumn() {Me.tabledataSiswaPP.idColumn}, New Global.System.Data.DataColumn() {Me.tabledataTest.idColumn}, false)
+        Me.Relations.Add(Me.relationdataSiswaPP_dataTest)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -497,6 +527,8 @@ Partial Public Class DataSetReportPendaftarPersiswa
         
         Private columnHobi As Global.System.Data.DataColumn
         
+        Private columnid As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -549,6 +581,14 @@ Partial Public Class DataSetReportPendaftarPersiswa
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property idColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -587,7 +627,7 @@ Partial Public Class DataSetReportPendaftarPersiswa
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Overloads Function AdddataHobiPPRow(ByVal nama As String, ByVal Hobi As String) As dataHobiPPRow
             Dim rowdataHobiPPRow As dataHobiPPRow = CType(Me.NewRow,dataHobiPPRow)
-            Dim columnValuesArray() As Object = New Object() {nama, Hobi}
+            Dim columnValuesArray() As Object = New Object() {nama, Hobi, Nothing}
             rowdataHobiPPRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowdataHobiPPRow)
             Return rowdataHobiPPRow
@@ -612,6 +652,7 @@ Partial Public Class DataSetReportPendaftarPersiswa
         Friend Sub InitVars()
             Me.columnnama = MyBase.Columns("nama")
             Me.columnHobi = MyBase.Columns("Hobi")
+            Me.columnid = MyBase.Columns("id")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -621,8 +662,15 @@ Partial Public Class DataSetReportPendaftarPersiswa
             MyBase.Columns.Add(Me.columnnama)
             Me.columnHobi = New Global.System.Data.DataColumn("Hobi", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnHobi)
+            Me.columnid = New Global.System.Data.DataColumn("id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid)
             Me.columnnama.MaxLength = 50
             Me.columnHobi.MaxLength = 30
+            Me.columnid.AutoIncrement = true
+            Me.columnid.AutoIncrementSeed = -1
+            Me.columnid.AutoIncrementStep = -1
+            Me.columnid.AllowDBNull = false
+            Me.columnid.ReadOnly = true
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -764,6 +812,8 @@ Partial Public Class DataSetReportPendaftarPersiswa
         
         Private columnnilai As Global.System.Data.DataColumn
         
+        Private columnid As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -816,6 +866,14 @@ Partial Public Class DataSetReportPendaftarPersiswa
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property idColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -852,9 +910,12 @@ Partial Public Class DataSetReportPendaftarPersiswa
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AdddataNilaiUNPPRow(ByVal mataPelajaran As String, ByVal nilai As Integer) As dataNilaiUNPPRow
+        Public Overloads Function AdddataNilaiUNPPRow(ByVal mataPelajaran As String, ByVal nilai As Integer, ByVal parentdataSiswaPPRowBydataSiswaPP_dataNilaiUNPP As dataSiswaPPRow) As dataNilaiUNPPRow
             Dim rowdataNilaiUNPPRow As dataNilaiUNPPRow = CType(Me.NewRow,dataNilaiUNPPRow)
-            Dim columnValuesArray() As Object = New Object() {mataPelajaran, nilai}
+            Dim columnValuesArray() As Object = New Object() {mataPelajaran, nilai, Nothing}
+            If (Not (parentdataSiswaPPRowBydataSiswaPP_dataNilaiUNPP) Is Nothing) Then
+                columnValuesArray(2) = parentdataSiswaPPRowBydataSiswaPP_dataNilaiUNPP(23)
+            End If
             rowdataNilaiUNPPRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowdataNilaiUNPPRow)
             Return rowdataNilaiUNPPRow
@@ -879,6 +940,7 @@ Partial Public Class DataSetReportPendaftarPersiswa
         Friend Sub InitVars()
             Me.columnmataPelajaran = MyBase.Columns("mataPelajaran")
             Me.columnnilai = MyBase.Columns("nilai")
+            Me.columnid = MyBase.Columns("id")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -888,7 +950,10 @@ Partial Public Class DataSetReportPendaftarPersiswa
             MyBase.Columns.Add(Me.columnmataPelajaran)
             Me.columnnilai = New Global.System.Data.DataColumn("nilai", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnnilai)
+            Me.columnid = New Global.System.Data.DataColumn("id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid)
             Me.columnmataPelajaran.MaxLength = 50
+            Me.columnid.AllowDBNull = false
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1034,6 +1099,10 @@ Partial Public Class DataSetReportPendaftarPersiswa
         
         Private columninstansi As Global.System.Data.DataColumn
         
+        Private columnnomorSertifikat As Global.System.Data.DataColumn
+        
+        Private columnalamat As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -1102,6 +1171,22 @@ Partial Public Class DataSetReportPendaftarPersiswa
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property nomorSertifikatColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnnomorSertifikat
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property alamatColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnalamat
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -1138,9 +1223,9 @@ Partial Public Class DataSetReportPendaftarPersiswa
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AdddataPendidikanNonFormalPPRow(ByVal nama As String, ByVal pendidikan As String, ByVal instansi As String) As dataPendidikanNonFormalPPRow
+        Public Overloads Function AdddataPendidikanNonFormalPPRow(ByVal nama As String, ByVal pendidikan As String, ByVal instansi As String, ByVal nomorSertifikat As String, ByVal alamat As String) As dataPendidikanNonFormalPPRow
             Dim rowdataPendidikanNonFormalPPRow As dataPendidikanNonFormalPPRow = CType(Me.NewRow,dataPendidikanNonFormalPPRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, nama, pendidikan, instansi}
+            Dim columnValuesArray() As Object = New Object() {Nothing, nama, pendidikan, instansi, nomorSertifikat, alamat}
             rowdataPendidikanNonFormalPPRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowdataPendidikanNonFormalPPRow)
             Return rowdataPendidikanNonFormalPPRow
@@ -1167,6 +1252,8 @@ Partial Public Class DataSetReportPendaftarPersiswa
             Me.columnnama = MyBase.Columns("nama")
             Me.columnpendidikan = MyBase.Columns("pendidikan")
             Me.columninstansi = MyBase.Columns("instansi")
+            Me.columnnomorSertifikat = MyBase.Columns("nomorSertifikat")
+            Me.columnalamat = MyBase.Columns("alamat")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1180,6 +1267,10 @@ Partial Public Class DataSetReportPendaftarPersiswa
             MyBase.Columns.Add(Me.columnpendidikan)
             Me.columninstansi = New Global.System.Data.DataColumn("instansi", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columninstansi)
+            Me.columnnomorSertifikat = New Global.System.Data.DataColumn("nomorSertifikat", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnnomorSertifikat)
+            Me.columnalamat = New Global.System.Data.DataColumn("alamat", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnalamat)
             Me.columnid.AutoIncrement = true
             Me.columnid.AutoIncrementSeed = -1
             Me.columnid.AutoIncrementStep = -1
@@ -1188,6 +1279,8 @@ Partial Public Class DataSetReportPendaftarPersiswa
             Me.columnnama.MaxLength = 50
             Me.columnpendidikan.MaxLength = 50
             Me.columninstansi.MaxLength = 50
+            Me.columnnomorSertifikat.MaxLength = 50
+            Me.columnalamat.MaxLength = 100
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1969,6 +2062,8 @@ Partial Public Class DataSetReportPendaftarPersiswa
         
         Private columnusername As Global.System.Data.DataColumn
         
+        Private columnid As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -2189,6 +2284,14 @@ Partial Public Class DataSetReportPendaftarPersiswa
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property idColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -2250,10 +2353,16 @@ Partial Public Class DataSetReportPendaftarPersiswa
                     ByVal PhotoKartuKeluarga() As Byte,  _
                     ByVal username As String) As dataSiswaPPRow
             Dim rowdataSiswaPPRow As dataSiswaPPRow = CType(Me.NewRow,dataSiswaPPRow)
-            Dim columnValuesArray() As Object = New Object() {NomorPendaftaran, tanggalPendaftaran, nama, tanggalLahir, beratBadan, tinggiBadan, gender, sekolahAsal, alamatSekolahAsal, namaAyah, pekerjaan, AlamatAyah, NamaIbu, pekerjaanIbu, alamatIbu, penghasilanOrangTua, Jurusan, nomorIjazah, nilaiRataRataKelulusan, photoPelamar, photoIjazah, PhotoKartuKeluarga, username}
+            Dim columnValuesArray() As Object = New Object() {NomorPendaftaran, tanggalPendaftaran, nama, tanggalLahir, beratBadan, tinggiBadan, gender, sekolahAsal, alamatSekolahAsal, namaAyah, pekerjaan, AlamatAyah, NamaIbu, pekerjaanIbu, alamatIbu, penghasilanOrangTua, Jurusan, nomorIjazah, nilaiRataRataKelulusan, photoPelamar, photoIjazah, PhotoKartuKeluarga, username, Nothing}
             rowdataSiswaPPRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowdataSiswaPPRow)
             Return rowdataSiswaPPRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function FindByid(ByVal id As Integer) As dataSiswaPPRow
+            Return CType(Me.Rows.Find(New Object() {id}),dataSiswaPPRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2296,6 +2405,7 @@ Partial Public Class DataSetReportPendaftarPersiswa
             Me.columnphotoIjazah = MyBase.Columns("photoIjazah")
             Me.columnPhotoKartuKeluarga = MyBase.Columns("PhotoKartuKeluarga")
             Me.columnusername = MyBase.Columns("username")
+            Me.columnid = MyBase.Columns("id")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2347,6 +2457,9 @@ Partial Public Class DataSetReportPendaftarPersiswa
             MyBase.Columns.Add(Me.columnPhotoKartuKeluarga)
             Me.columnusername = New Global.System.Data.DataColumn("username", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnusername)
+            Me.columnid = New Global.System.Data.DataColumn("id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid}, true))
             Me.columnNomorPendaftaran.MaxLength = 20
             Me.columnnama.MaxLength = 50
             Me.columngender.ReadOnly = true
@@ -2363,6 +2476,12 @@ Partial Public Class DataSetReportPendaftarPersiswa
             Me.columnnomorIjazah.MaxLength = 50
             Me.columnusername.AllowDBNull = false
             Me.columnusername.MaxLength = 24
+            Me.columnid.AutoIncrement = true
+            Me.columnid.AutoIncrementSeed = -1
+            Me.columnid.AutoIncrementStep = -1
+            Me.columnid.AllowDBNull = false
+            Me.columnid.ReadOnly = true
+            Me.columnid.Unique = true
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2510,6 +2629,8 @@ Partial Public Class DataSetReportPendaftarPersiswa
         
         Private columnnilai As Global.System.Data.DataColumn
         
+        Private columnKeterangan As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -2586,6 +2707,14 @@ Partial Public Class DataSetReportPendaftarPersiswa
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property KeteranganColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnKeterangan
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -2622,9 +2751,9 @@ Partial Public Class DataSetReportPendaftarPersiswa
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AdddataTestRow(ByVal nama As String, ByVal NamaTest As String, ByVal Minimal As Integer, ByVal nilai As Integer) As dataTestRow
+        Public Overloads Function AdddataTestRow(ByVal nama As String, ByVal NamaTest As String, ByVal Minimal As Integer, ByVal nilai As Integer, ByVal Keterangan As String) As dataTestRow
             Dim rowdataTestRow As dataTestRow = CType(Me.NewRow,dataTestRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, nama, NamaTest, Minimal, nilai}
+            Dim columnValuesArray() As Object = New Object() {Nothing, nama, NamaTest, Minimal, nilai, Keterangan}
             rowdataTestRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowdataTestRow)
             Return rowdataTestRow
@@ -2652,6 +2781,7 @@ Partial Public Class DataSetReportPendaftarPersiswa
             Me.columnNamaTest = MyBase.Columns("NamaTest")
             Me.columnMinimal = MyBase.Columns("Minimal")
             Me.columnnilai = MyBase.Columns("nilai")
+            Me.columnKeterangan = MyBase.Columns("Keterangan")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2667,6 +2797,8 @@ Partial Public Class DataSetReportPendaftarPersiswa
             MyBase.Columns.Add(Me.columnMinimal)
             Me.columnnilai = New Global.System.Data.DataColumn("nilai", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnnilai)
+            Me.columnKeterangan = New Global.System.Data.DataColumn("Keterangan", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnKeterangan)
             Me.columnid.AutoIncrement = true
             Me.columnid.AutoIncrementSeed = -1
             Me.columnid.AutoIncrementStep = -1
@@ -2674,6 +2806,8 @@ Partial Public Class DataSetReportPendaftarPersiswa
             Me.columnid.ReadOnly = true
             Me.columnnama.MaxLength = 50
             Me.columnNamaTest.MaxLength = 50
+            Me.columnKeterangan.ReadOnly = true
+            Me.columnKeterangan.MaxLength = 11
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2850,6 +2984,28 @@ Partial Public Class DataSetReportPendaftarPersiswa
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id() As Integer
+            Get
+                Return CType(Me(Me.tabledataHobiPP.idColumn),Integer)
+            End Get
+            Set
+                Me(Me.tabledataHobiPP.idColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property dataSiswaPPRow() As dataSiswaPPRow
+            Get
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("dataSiswaPP_dataHobiPP")),dataSiswaPPRow)
+            End Get
+            Set
+                Me.SetParentRow(value, Me.Table.ParentRelations("dataSiswaPP_dataHobiPP"))
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsnamaNull() As Boolean
             Return Me.IsNull(Me.tabledataHobiPP.namaColumn)
         End Function
@@ -2915,6 +3071,28 @@ Partial Public Class DataSetReportPendaftarPersiswa
             End Get
             Set
                 Me(Me.tabledataNilaiUNPP.nilaiColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id() As Integer
+            Get
+                Return CType(Me(Me.tabledataNilaiUNPP.idColumn),Integer)
+            End Get
+            Set
+                Me(Me.tabledataNilaiUNPP.idColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property dataSiswaPPRow() As dataSiswaPPRow
+            Get
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("dataSiswaPP_dataNilaiUNPP")),dataSiswaPPRow)
+            End Get
+            Set
+                Me.SetParentRow(value, Me.Table.ParentRelations("dataSiswaPP_dataNilaiUNPP"))
             End Set
         End Property
         
@@ -3017,6 +3195,48 @@ Partial Public Class DataSetReportPendaftarPersiswa
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property nomorSertifikat() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabledataPendidikanNonFormalPP.nomorSertifikatColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'nomorSertifikat' in table 'dataPendidikanNonFormalPP' is DB"& _ 
+                            "Null.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabledataPendidikanNonFormalPP.nomorSertifikatColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property alamat() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabledataPendidikanNonFormalPP.alamatColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'alamat' in table 'dataPendidikanNonFormalPP' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabledataPendidikanNonFormalPP.alamatColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property dataSiswaPPRow() As dataSiswaPPRow
+            Get
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("dataSiswaPP_dataPendidikanNonFormalPP")),dataSiswaPPRow)
+            End Get
+            Set
+                Me.SetParentRow(value, Me.Table.ParentRelations("dataSiswaPP_dataPendidikanNonFormalPP"))
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsnamaNull() As Boolean
             Return Me.IsNull(Me.tabledataPendidikanNonFormalPP.namaColumn)
         End Function
@@ -3049,6 +3269,30 @@ Partial Public Class DataSetReportPendaftarPersiswa
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetinstansiNull()
             Me(Me.tabledataPendidikanNonFormalPP.instansiColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsnomorSertifikatNull() As Boolean
+            Return Me.IsNull(Me.tabledataPendidikanNonFormalPP.nomorSertifikatColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetnomorSertifikatNull()
+            Me(Me.tabledataPendidikanNonFormalPP.nomorSertifikatColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsalamatNull() As Boolean
+            Return Me.IsNull(Me.tabledataPendidikanNonFormalPP.alamatColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetalamatNull()
+            Me(Me.tabledataPendidikanNonFormalPP.alamatColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -3135,6 +3379,17 @@ Partial Public Class DataSetReportPendaftarPersiswa
             End Get
             Set
                 Me(Me.tabledatapengalamanOrganisasi.keteranganColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property dataSiswaPPRow() As dataSiswaPPRow
+            Get
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("dataSiswaPP_datapengalamanOrganisasi")),dataSiswaPPRow)
+            End Get
+            Set
+                Me.SetParentRow(value, Me.Table.ParentRelations("dataSiswaPP_datapengalamanOrganisasi"))
             End Set
         End Property
         
@@ -3240,6 +3495,17 @@ Partial Public Class DataSetReportPendaftarPersiswa
             End Get
             Set
                 Me(Me.tabledataPrestasiPP.prestasiColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property dataSiswaPPRow() As dataSiswaPPRow
+            Get
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("dataSiswaPP_dataPrestasiPP")),dataSiswaPPRow)
+            End Get
+            Set
+                Me.SetParentRow(value, Me.Table.ParentRelations("dataSiswaPP_dataPrestasiPP"))
             End Set
         End Property
         
@@ -3626,6 +3892,17 @@ Partial Public Class DataSetReportPendaftarPersiswa
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id() As Integer
+            Get
+                Return CType(Me(Me.tabledataSiswaPP.idColumn),Integer)
+            End Get
+            Set
+                Me(Me.tabledataSiswaPP.idColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsNomorPendaftaranNull() As Boolean
             Return Me.IsNull(Me.tabledataSiswaPP.NomorPendaftaranColumn)
         End Function
@@ -3887,6 +4164,66 @@ Partial Public Class DataSetReportPendaftarPersiswa
         Public Sub SetPhotoKartuKeluargaNull()
             Me(Me.tabledataSiswaPP.PhotoKartuKeluargaColumn) = Global.System.Convert.DBNull
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function GetdataPendidikanNonFormalPPRows() As dataPendidikanNonFormalPPRow()
+            If (Me.Table.ChildRelations("dataSiswaPP_dataPendidikanNonFormalPP") Is Nothing) Then
+                Return New dataPendidikanNonFormalPPRow(-1) {}
+            Else
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("dataSiswaPP_dataPendidikanNonFormalPP")),dataPendidikanNonFormalPPRow())
+            End If
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function GetdataPrestasiPPRows() As dataPrestasiPPRow()
+            If (Me.Table.ChildRelations("dataSiswaPP_dataPrestasiPP") Is Nothing) Then
+                Return New dataPrestasiPPRow(-1) {}
+            Else
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("dataSiswaPP_dataPrestasiPP")),dataPrestasiPPRow())
+            End If
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function GetdataHobiPPRows() As dataHobiPPRow()
+            If (Me.Table.ChildRelations("dataSiswaPP_dataHobiPP") Is Nothing) Then
+                Return New dataHobiPPRow(-1) {}
+            Else
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("dataSiswaPP_dataHobiPP")),dataHobiPPRow())
+            End If
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function GetdatapengalamanOrganisasiRows() As datapengalamanOrganisasiRow()
+            If (Me.Table.ChildRelations("dataSiswaPP_datapengalamanOrganisasi") Is Nothing) Then
+                Return New datapengalamanOrganisasiRow(-1) {}
+            Else
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("dataSiswaPP_datapengalamanOrganisasi")),datapengalamanOrganisasiRow())
+            End If
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function GetdataNilaiUNPPRows() As dataNilaiUNPPRow()
+            If (Me.Table.ChildRelations("dataSiswaPP_dataNilaiUNPP") Is Nothing) Then
+                Return New dataNilaiUNPPRow(-1) {}
+            Else
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("dataSiswaPP_dataNilaiUNPP")),dataNilaiUNPPRow())
+            End If
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function GetdataTestRows() As dataTestRow()
+            If (Me.Table.ChildRelations("dataSiswaPP_dataTest") Is Nothing) Then
+                Return New dataTestRow(-1) {}
+            Else
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("dataSiswaPP_dataTest")),dataTestRow())
+            End If
+        End Function
     End Class
     
     '''<summary>
@@ -3977,6 +4314,32 @@ Partial Public Class DataSetReportPendaftarPersiswa
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Keterangan() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabledataTest.KeteranganColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Keterangan' in table 'dataTest' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabledataTest.KeteranganColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property dataSiswaPPRow() As dataSiswaPPRow
+            Get
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("dataSiswaPP_dataTest")),dataSiswaPPRow)
+            End Get
+            Set
+                Me.SetParentRow(value, Me.Table.ParentRelations("dataSiswaPP_dataTest"))
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsnamaNull() As Boolean
             Return Me.IsNull(Me.tabledataTest.namaColumn)
         End Function
@@ -4021,6 +4384,18 @@ Partial Public Class DataSetReportPendaftarPersiswa
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetnilaiNull()
             Me(Me.tabledataTest.nilaiColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsKeteranganNull() As Boolean
+            Return Me.IsNull(Me.tabledataTest.KeteranganColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetKeteranganNull()
+            Me(Me.tabledataTest.KeteranganColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -4408,6 +4783,7 @@ Namespace DataSetReportPendaftarPersiswaTableAdapters
             tableMapping.DataSetTable = "dataHobiPP"
             tableMapping.ColumnMappings.Add("nama", "nama")
             tableMapping.ColumnMappings.Add("Hobi", "Hobi")
+            tableMapping.ColumnMappings.Add("id", "id")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -4594,6 +4970,7 @@ Namespace DataSetReportPendaftarPersiswaTableAdapters
             tableMapping.DataSetTable = "dataNilaiUNPP"
             tableMapping.ColumnMappings.Add("mataPelajaran", "mataPelajaran")
             tableMapping.ColumnMappings.Add("nilai", "nilai")
+            tableMapping.ColumnMappings.Add("id", "id")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -4782,6 +5159,8 @@ Namespace DataSetReportPendaftarPersiswaTableAdapters
             tableMapping.ColumnMappings.Add("nama", "nama")
             tableMapping.ColumnMappings.Add("pendidikan", "pendidikan")
             tableMapping.ColumnMappings.Add("instansi", "instansi")
+            tableMapping.ColumnMappings.Add("nomorSertifikat", "nomorSertifikat")
+            tableMapping.ColumnMappings.Add("alamat", "alamat")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -5365,6 +5744,7 @@ Namespace DataSetReportPendaftarPersiswaTableAdapters
             tableMapping.ColumnMappings.Add("photoIjazah", "photoIjazah")
             tableMapping.ColumnMappings.Add("PhotoKartuKeluarga", "PhotoKartuKeluarga")
             tableMapping.ColumnMappings.Add("username", "username")
+            tableMapping.ColumnMappings.Add("id", "id")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -5554,6 +5934,7 @@ Namespace DataSetReportPendaftarPersiswaTableAdapters
             tableMapping.ColumnMappings.Add("NamaTest", "NamaTest")
             tableMapping.ColumnMappings.Add("Minimal", "Minimal")
             tableMapping.ColumnMappings.Add("nilai", "nilai")
+            tableMapping.ColumnMappings.Add("Keterangan", "Keterangan")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         

@@ -9,7 +9,7 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dataHobiPPTableAdapter" GeneratorDataComponentClassName="dataHobiPPTableAdapter" Name="dataHobiPP" UserDataComponentName="dataHobiPPTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConnString (Settings)" DbObjectName="StudentRegistration.dbo.dataHobiPP" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConnString (Settings)" DbObjectName="StudentRegistration.dbo.dataHobiPP" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.dataHobiPP</CommandText>
@@ -24,12 +24,13 @@
             <Mappings>
               <Mapping SourceColumn="nama" DataSetColumn="nama" />
               <Mapping SourceColumn="Hobi" DataSetColumn="Hobi" />
+              <Mapping SourceColumn="id" DataSetColumn="id" />
             </Mappings>
             <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dataNilaiUNPPTableAdapter" GeneratorDataComponentClassName="dataNilaiUNPPTableAdapter" Name="dataNilaiUNPP" UserDataComponentName="dataNilaiUNPPTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConnString (Settings)" DbObjectName="StudentRegistration.dbo.dataNilaiUNPP" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConnString (Settings)" DbObjectName="StudentRegistration.dbo.dataNilaiUNPP" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.dataNilaiUNPP</CommandText>
@@ -44,12 +45,13 @@
             <Mappings>
               <Mapping SourceColumn="mataPelajaran" DataSetColumn="mataPelajaran" />
               <Mapping SourceColumn="nilai" DataSetColumn="nilai" />
+              <Mapping SourceColumn="id" DataSetColumn="id" />
             </Mappings>
             <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dataPendidikanNonFormalPPTableAdapter" GeneratorDataComponentClassName="dataPendidikanNonFormalPPTableAdapter" Name="dataPendidikanNonFormalPP" UserDataComponentName="dataPendidikanNonFormalPPTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConnString (Settings)" DbObjectName="StudentRegistration.dbo.dataPendidikanNonFormalPP" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConnString (Settings)" DbObjectName="StudentRegistration.dbo.dataPendidikanNonFormalPP" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.dataPendidikanNonFormalPP</CommandText>
@@ -66,6 +68,8 @@
               <Mapping SourceColumn="nama" DataSetColumn="nama" />
               <Mapping SourceColumn="pendidikan" DataSetColumn="pendidikan" />
               <Mapping SourceColumn="instansi" DataSetColumn="instansi" />
+              <Mapping SourceColumn="nomorSertifikat" DataSetColumn="nomorSertifikat" />
+              <Mapping SourceColumn="alamat" DataSetColumn="alamat" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -115,7 +119,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dataSiswaPPTableAdapter" GeneratorDataComponentClassName="dataSiswaPPTableAdapter" Name="dataSiswaPP" UserDataComponentName="dataSiswaPPTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConnString (Settings)" DbObjectName="StudentRegistration.dbo.dataSiswaPP" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConnString (Settings)" DbObjectName="StudentRegistration.dbo.dataSiswaPP" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.dataSiswaPP</CommandText>
@@ -151,12 +155,13 @@
               <Mapping SourceColumn="photoIjazah" DataSetColumn="photoIjazah" />
               <Mapping SourceColumn="PhotoKartuKeluarga" DataSetColumn="PhotoKartuKeluarga" />
               <Mapping SourceColumn="username" DataSetColumn="username" />
+              <Mapping SourceColumn="id" DataSetColumn="id" />
             </Mappings>
             <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dataTestTableAdapter" GeneratorDataComponentClassName="dataTestTableAdapter" Name="dataTest" UserDataComponentName="dataTestTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConnString (Settings)" DbObjectName="StudentRegistration.dbo.dataTest" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConnString (Settings)" DbObjectName="StudentRegistration.dbo.dataTest" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.dataTest</CommandText>
@@ -174,6 +179,7 @@
               <Mapping SourceColumn="NamaTest" DataSetColumn="NamaTest" />
               <Mapping SourceColumn="Minimal" DataSetColumn="Minimal" />
               <Mapping SourceColumn="nilai" DataSetColumn="nilai" />
+              <Mapping SourceColumn="Keterangan" DataSetColumn="Keterangan" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -185,7 +191,7 @@
   <xs:element name="DataSetReportPendaftarPersiswa" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetReportPendaftarPersiswa" msprop:Generator_UserDSName="DataSetReportPendaftarPersiswa">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="dataHobiPP" msprop:Generator_TableClassName="dataHobiPPDataTable" msprop:Generator_TableVarName="tabledataHobiPP" msprop:Generator_TablePropName="dataHobiPP" msprop:Generator_RowDeletingName="dataHobiPPRowDeleting" msprop:Generator_RowChangingName="dataHobiPPRowChanging" msprop:Generator_RowEvHandlerName="dataHobiPPRowChangeEventHandler" msprop:Generator_RowDeletedName="dataHobiPPRowDeleted" msprop:Generator_UserTableName="dataHobiPP" msprop:Generator_RowChangedName="dataHobiPPRowChanged" msprop:Generator_RowEvArgName="dataHobiPPRowChangeEvent" msprop:Generator_RowClassName="dataHobiPPRow">
+        <xs:element name="dataHobiPP" msprop:Generator_TableClassName="dataHobiPPDataTable" msprop:Generator_TableVarName="tabledataHobiPP" msprop:Generator_RowChangedName="dataHobiPPRowChanged" msprop:Generator_TablePropName="dataHobiPP" msprop:Generator_RowDeletingName="dataHobiPPRowDeleting" msprop:Generator_RowChangingName="dataHobiPPRowChanging" msprop:Generator_RowEvHandlerName="dataHobiPPRowChangeEventHandler" msprop:Generator_RowDeletedName="dataHobiPPRowDeleted" msprop:Generator_RowClassName="dataHobiPPRow" msprop:Generator_UserTableName="dataHobiPP" msprop:Generator_RowEvArgName="dataHobiPPRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nama" msprop:Generator_ColumnVarNameInTable="columnnama" msprop:Generator_ColumnPropNameInRow="nama" msprop:Generator_ColumnPropNameInTable="namaColumn" msprop:Generator_UserColumnName="nama" minOccurs="0">
@@ -202,10 +208,11 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="dataNilaiUNPP" msprop:Generator_TableClassName="dataNilaiUNPPDataTable" msprop:Generator_TableVarName="tabledataNilaiUNPP" msprop:Generator_TablePropName="dataNilaiUNPP" msprop:Generator_RowDeletingName="dataNilaiUNPPRowDeleting" msprop:Generator_RowChangingName="dataNilaiUNPPRowChanging" msprop:Generator_RowEvHandlerName="dataNilaiUNPPRowChangeEventHandler" msprop:Generator_RowDeletedName="dataNilaiUNPPRowDeleted" msprop:Generator_UserTableName="dataNilaiUNPP" msprop:Generator_RowChangedName="dataNilaiUNPPRowChanged" msprop:Generator_RowEvArgName="dataNilaiUNPPRowChangeEvent" msprop:Generator_RowClassName="dataNilaiUNPPRow">
+        <xs:element name="dataNilaiUNPP" msprop:Generator_TableClassName="dataNilaiUNPPDataTable" msprop:Generator_TableVarName="tabledataNilaiUNPP" msprop:Generator_RowChangedName="dataNilaiUNPPRowChanged" msprop:Generator_TablePropName="dataNilaiUNPP" msprop:Generator_RowDeletingName="dataNilaiUNPPRowDeleting" msprop:Generator_RowChangingName="dataNilaiUNPPRowChanging" msprop:Generator_RowEvHandlerName="dataNilaiUNPPRowChangeEventHandler" msprop:Generator_RowDeletedName="dataNilaiUNPPRowDeleted" msprop:Generator_RowClassName="dataNilaiUNPPRow" msprop:Generator_UserTableName="dataNilaiUNPP" msprop:Generator_RowEvArgName="dataNilaiUNPPRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="mataPelajaran" msprop:Generator_ColumnVarNameInTable="columnmataPelajaran" msprop:Generator_ColumnPropNameInRow="mataPelajaran" msprop:Generator_ColumnPropNameInTable="mataPelajaranColumn" msprop:Generator_UserColumnName="mataPelajaran" minOccurs="0">
@@ -216,10 +223,11 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="nilai" msprop:Generator_ColumnVarNameInTable="columnnilai" msprop:Generator_ColumnPropNameInRow="nilai" msprop:Generator_ColumnPropNameInTable="nilaiColumn" msprop:Generator_UserColumnName="nilai" type="xs:int" minOccurs="0" />
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="dataPendidikanNonFormalPP" msprop:Generator_TableClassName="dataPendidikanNonFormalPPDataTable" msprop:Generator_TableVarName="tabledataPendidikanNonFormalPP" msprop:Generator_TablePropName="dataPendidikanNonFormalPP" msprop:Generator_RowDeletingName="dataPendidikanNonFormalPPRowDeleting" msprop:Generator_RowChangingName="dataPendidikanNonFormalPPRowChanging" msprop:Generator_RowEvHandlerName="dataPendidikanNonFormalPPRowChangeEventHandler" msprop:Generator_RowDeletedName="dataPendidikanNonFormalPPRowDeleted" msprop:Generator_UserTableName="dataPendidikanNonFormalPP" msprop:Generator_RowChangedName="dataPendidikanNonFormalPPRowChanged" msprop:Generator_RowEvArgName="dataPendidikanNonFormalPPRowChangeEvent" msprop:Generator_RowClassName="dataPendidikanNonFormalPPRow">
+        <xs:element name="dataPendidikanNonFormalPP" msprop:Generator_TableClassName="dataPendidikanNonFormalPPDataTable" msprop:Generator_TableVarName="tabledataPendidikanNonFormalPP" msprop:Generator_RowChangedName="dataPendidikanNonFormalPPRowChanged" msprop:Generator_TablePropName="dataPendidikanNonFormalPP" msprop:Generator_RowDeletingName="dataPendidikanNonFormalPPRowDeleting" msprop:Generator_RowChangingName="dataPendidikanNonFormalPPRowChanging" msprop:Generator_RowEvHandlerName="dataPendidikanNonFormalPPRowChangeEventHandler" msprop:Generator_RowDeletedName="dataPendidikanNonFormalPPRowDeleted" msprop:Generator_RowClassName="dataPendidikanNonFormalPPRow" msprop:Generator_UserTableName="dataPendidikanNonFormalPP" msprop:Generator_RowEvArgName="dataPendidikanNonFormalPPRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -244,10 +252,24 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="nomorSertifikat" msprop:Generator_ColumnVarNameInTable="columnnomorSertifikat" msprop:Generator_ColumnPropNameInRow="nomorSertifikat" msprop:Generator_ColumnPropNameInTable="nomorSertifikatColumn" msprop:Generator_UserColumnName="nomorSertifikat" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="alamat" msprop:Generator_ColumnVarNameInTable="columnalamat" msprop:Generator_ColumnPropNameInRow="alamat" msprop:Generator_ColumnPropNameInTable="alamatColumn" msprop:Generator_UserColumnName="alamat" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="datapengalamanOrganisasi" msprop:Generator_TableClassName="datapengalamanOrganisasiDataTable" msprop:Generator_TableVarName="tabledatapengalamanOrganisasi" msprop:Generator_TablePropName="datapengalamanOrganisasi" msprop:Generator_RowDeletingName="datapengalamanOrganisasiRowDeleting" msprop:Generator_RowChangingName="datapengalamanOrganisasiRowChanging" msprop:Generator_RowEvHandlerName="datapengalamanOrganisasiRowChangeEventHandler" msprop:Generator_RowDeletedName="datapengalamanOrganisasiRowDeleted" msprop:Generator_UserTableName="datapengalamanOrganisasi" msprop:Generator_RowChangedName="datapengalamanOrganisasiRowChanged" msprop:Generator_RowEvArgName="datapengalamanOrganisasiRowChangeEvent" msprop:Generator_RowClassName="datapengalamanOrganisasiRow">
+        <xs:element name="datapengalamanOrganisasi" msprop:Generator_TableClassName="datapengalamanOrganisasiDataTable" msprop:Generator_TableVarName="tabledatapengalamanOrganisasi" msprop:Generator_RowChangedName="datapengalamanOrganisasiRowChanged" msprop:Generator_TablePropName="datapengalamanOrganisasi" msprop:Generator_RowDeletingName="datapengalamanOrganisasiRowDeleting" msprop:Generator_RowChangingName="datapengalamanOrganisasiRowChanging" msprop:Generator_RowEvHandlerName="datapengalamanOrganisasiRowChangeEventHandler" msprop:Generator_RowDeletedName="datapengalamanOrganisasiRowDeleted" msprop:Generator_RowClassName="datapengalamanOrganisasiRow" msprop:Generator_UserTableName="datapengalamanOrganisasi" msprop:Generator_RowEvArgName="datapengalamanOrganisasiRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -282,7 +304,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="dataPrestasiPP" msprop:Generator_TableClassName="dataPrestasiPPDataTable" msprop:Generator_TableVarName="tabledataPrestasiPP" msprop:Generator_TablePropName="dataPrestasiPP" msprop:Generator_RowDeletingName="dataPrestasiPPRowDeleting" msprop:Generator_RowChangingName="dataPrestasiPPRowChanging" msprop:Generator_RowEvHandlerName="dataPrestasiPPRowChangeEventHandler" msprop:Generator_RowDeletedName="dataPrestasiPPRowDeleted" msprop:Generator_UserTableName="dataPrestasiPP" msprop:Generator_RowChangedName="dataPrestasiPPRowChanged" msprop:Generator_RowEvArgName="dataPrestasiPPRowChangeEvent" msprop:Generator_RowClassName="dataPrestasiPPRow">
+        <xs:element name="dataPrestasiPP" msprop:Generator_TableClassName="dataPrestasiPPDataTable" msprop:Generator_TableVarName="tabledataPrestasiPP" msprop:Generator_RowChangedName="dataPrestasiPPRowChanged" msprop:Generator_TablePropName="dataPrestasiPP" msprop:Generator_RowDeletingName="dataPrestasiPPRowDeleting" msprop:Generator_RowChangingName="dataPrestasiPPRowChanging" msprop:Generator_RowEvHandlerName="dataPrestasiPPRowChangeEventHandler" msprop:Generator_RowDeletedName="dataPrestasiPPRowDeleted" msprop:Generator_RowClassName="dataPrestasiPPRow" msprop:Generator_UserTableName="dataPrestasiPP" msprop:Generator_RowEvArgName="dataPrestasiPPRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -303,7 +325,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="dataSiswaPP" msprop:Generator_TableClassName="dataSiswaPPDataTable" msprop:Generator_TableVarName="tabledataSiswaPP" msprop:Generator_TablePropName="dataSiswaPP" msprop:Generator_RowDeletingName="dataSiswaPPRowDeleting" msprop:Generator_RowChangingName="dataSiswaPPRowChanging" msprop:Generator_RowEvHandlerName="dataSiswaPPRowChangeEventHandler" msprop:Generator_RowDeletedName="dataSiswaPPRowDeleted" msprop:Generator_UserTableName="dataSiswaPP" msprop:Generator_RowChangedName="dataSiswaPPRowChanged" msprop:Generator_RowEvArgName="dataSiswaPPRowChangeEvent" msprop:Generator_RowClassName="dataSiswaPPRow">
+        <xs:element name="dataSiswaPP" msprop:Generator_TableClassName="dataSiswaPPDataTable" msprop:Generator_TableVarName="tabledataSiswaPP" msprop:Generator_RowChangedName="dataSiswaPPRowChanged" msprop:Generator_TablePropName="dataSiswaPP" msprop:Generator_RowDeletingName="dataSiswaPPRowDeleting" msprop:Generator_RowChangingName="dataSiswaPPRowChanging" msprop:Generator_RowEvHandlerName="dataSiswaPPRowChangeEventHandler" msprop:Generator_RowDeletedName="dataSiswaPPRowDeleted" msprop:Generator_RowClassName="dataSiswaPPRow" msprop:Generator_UserTableName="dataSiswaPP" msprop:Generator_RowEvArgName="dataSiswaPPRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NomorPendaftaran" msprop:Generator_ColumnVarNameInTable="columnNomorPendaftaran" msprop:Generator_ColumnPropNameInRow="NomorPendaftaran" msprop:Generator_ColumnPropNameInTable="NomorPendaftaranColumn" msprop:Generator_UserColumnName="NomorPendaftaran" minOccurs="0">
@@ -413,10 +435,11 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="dataTest" msprop:Generator_TableClassName="dataTestDataTable" msprop:Generator_TableVarName="tabledataTest" msprop:Generator_TablePropName="dataTest" msprop:Generator_RowDeletingName="dataTestRowDeleting" msprop:Generator_RowChangingName="dataTestRowChanging" msprop:Generator_RowEvHandlerName="dataTestRowChangeEventHandler" msprop:Generator_RowDeletedName="dataTestRowDeleted" msprop:Generator_UserTableName="dataTest" msprop:Generator_RowChangedName="dataTestRowChanged" msprop:Generator_RowEvArgName="dataTestRowChangeEvent" msprop:Generator_RowClassName="dataTestRow">
+        <xs:element name="dataTest" msprop:Generator_TableClassName="dataTestDataTable" msprop:Generator_TableVarName="tabledataTest" msprop:Generator_RowChangedName="dataTestRowChanged" msprop:Generator_TablePropName="dataTest" msprop:Generator_RowDeletingName="dataTestRowDeleting" msprop:Generator_RowChangingName="dataTestRowChanging" msprop:Generator_RowEvHandlerName="dataTestRowChangeEventHandler" msprop:Generator_RowDeletedName="dataTestRowDeleted" msprop:Generator_RowClassName="dataTestRow" msprop:Generator_UserTableName="dataTest" msprop:Generator_RowEvArgName="dataTestRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -436,10 +459,31 @@
               </xs:element>
               <xs:element name="Minimal" msprop:Generator_ColumnVarNameInTable="columnMinimal" msprop:Generator_ColumnPropNameInRow="Minimal" msprop:Generator_ColumnPropNameInTable="MinimalColumn" msprop:Generator_UserColumnName="Minimal" type="xs:int" minOccurs="0" />
               <xs:element name="nilai" msprop:Generator_ColumnVarNameInTable="columnnilai" msprop:Generator_ColumnPropNameInRow="nilai" msprop:Generator_ColumnPropNameInTable="nilaiColumn" msprop:Generator_UserColumnName="nilai" type="xs:int" minOccurs="0" />
+              <xs:element name="Keterangan" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnKeterangan" msprop:Generator_ColumnPropNameInRow="Keterangan" msprop:Generator_ColumnPropNameInTable="KeteranganColumn" msprop:Generator_UserColumnName="Keterangan" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
       </xs:choice>
     </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:dataSiswaPP" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
   </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="dataSiswaPP_dataPendidikanNonFormalPP" msdata:parent="dataSiswaPP" msdata:child="dataPendidikanNonFormalPP" msdata:parentkey="id" msdata:childkey="id" msprop:Generator_UserChildTable="dataPendidikanNonFormalPP" msprop:Generator_ChildPropName="GetdataPendidikanNonFormalPPRows" msprop:Generator_UserRelationName="dataSiswaPP_dataPendidikanNonFormalPP" msprop:Generator_ParentPropName="dataSiswaPPRow" msprop:Generator_RelationVarName="relationdataSiswaPP_dataPendidikanNonFormalPP" msprop:Generator_UserParentTable="dataSiswaPP" />
+      <msdata:Relationship name="dataSiswaPP_dataPrestasiPP" msdata:parent="dataSiswaPP" msdata:child="dataPrestasiPP" msdata:parentkey="id" msdata:childkey="id" msprop:Generator_UserChildTable="dataPrestasiPP" msprop:Generator_ChildPropName="GetdataPrestasiPPRows" msprop:Generator_UserRelationName="dataSiswaPP_dataPrestasiPP" msprop:Generator_ParentPropName="dataSiswaPPRow" msprop:Generator_RelationVarName="relationdataSiswaPP_dataPrestasiPP" msprop:Generator_UserParentTable="dataSiswaPP" />
+      <msdata:Relationship name="dataSiswaPP_dataHobiPP" msdata:parent="dataSiswaPP" msdata:child="dataHobiPP" msdata:parentkey="id" msdata:childkey="id" msprop:Generator_UserChildTable="dataHobiPP" msprop:Generator_ChildPropName="GetdataHobiPPRows" msprop:Generator_UserRelationName="dataSiswaPP_dataHobiPP" msprop:Generator_ParentPropName="dataSiswaPPRow" msprop:Generator_RelationVarName="relationdataSiswaPP_dataHobiPP" msprop:Generator_UserParentTable="dataSiswaPP" />
+      <msdata:Relationship name="dataSiswaPP_datapengalamanOrganisasi" msdata:parent="dataSiswaPP" msdata:child="datapengalamanOrganisasi" msdata:parentkey="id" msdata:childkey="id" msprop:Generator_UserChildTable="datapengalamanOrganisasi" msprop:Generator_ChildPropName="GetdatapengalamanOrganisasiRows" msprop:Generator_UserRelationName="dataSiswaPP_datapengalamanOrganisasi" msprop:Generator_ParentPropName="dataSiswaPPRow" msprop:Generator_RelationVarName="relationdataSiswaPP_datapengalamanOrganisasi" msprop:Generator_UserParentTable="dataSiswaPP" />
+      <msdata:Relationship name="dataSiswaPP_dataNilaiUNPP" msdata:parent="dataSiswaPP" msdata:child="dataNilaiUNPP" msdata:parentkey="id" msdata:childkey="id" msprop:Generator_UserChildTable="dataNilaiUNPP" msprop:Generator_ChildPropName="GetdataNilaiUNPPRows" msprop:Generator_UserRelationName="dataSiswaPP_dataNilaiUNPP" msprop:Generator_ParentPropName="dataSiswaPPRow" msprop:Generator_RelationVarName="relationdataSiswaPP_dataNilaiUNPP" msprop:Generator_UserParentTable="dataSiswaPP" />
+      <msdata:Relationship name="dataSiswaPP_dataTest" msdata:parent="dataSiswaPP" msdata:child="dataTest" msdata:parentkey="id" msdata:childkey="id" msprop:Generator_UserChildTable="dataTest" msprop:Generator_ChildPropName="GetdataTestRows" msprop:Generator_UserRelationName="dataSiswaPP_dataTest" msprop:Generator_RelationVarName="relationdataSiswaPP_dataTest" msprop:Generator_UserParentTable="dataSiswaPP" msprop:Generator_ParentPropName="dataSiswaPPRow" />
+    </xs:appinfo>
+  </xs:annotation>
 </xs:schema>
